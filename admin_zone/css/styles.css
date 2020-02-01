@@ -1,0 +1,275 @@
+@font-face 
+{
+    font-family: 'Nunito Sans';
+        src: url('fonts/NunitoSans-Light.ttf');
+}
+body
+{
+    background-color: #fafafa;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.holder
+{
+    width: 95%;
+}
+.g-recaptcha
+{
+    width: 50%;
+    margin: 2% auto;
+}
+.shield
+{
+    height: 65px;
+    width: auto;
+}
+.img-show
+{
+    margin: 1%;
+}
+.show-img
+{
+    padding: 0%;
+    background-color: transparent;
+    border: 0px transparent;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px transparent;
+}
+.dashboard
+{
+    width: 100%;
+    text-align: center;
+}
+.dashboard p
+{
+    font-size: 1.5em;
+}
+.link_dash
+{
+    color: #000;
+    font-size: 1.5em;
+}
+/* ajax */
+#rest-form,#rest-form-ad
+{
+    display: none;
+}
+/* end ajax */
+.region_logo
+{
+    height: 20px;
+    width: auto;
+}
+.error404 h1
+{
+    font-size: 3em;
+}
+.login
+{
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.logo
+{
+    margin-top:4%;   
+}
+.logo img
+{
+    max-width: 200px;
+    height: auto;
+}
+.len50
+{
+    width: 50%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.len50 > h4
+{
+    margin-bottom: 6%;
+}
+.logo_panel
+{
+    height: auto;
+    max-width: 180px;
+}
+.nav-bg
+{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0%;
+    margin: 2% 0%;
+}
+.navbar-default
+{
+    background-color: transparent;
+    border:none;
+    padding-top: 0.5%;
+}
+.navbar .navbar-header .icon-bar
+{
+    background-color: #777;
+}
+
+.navbar-default .navbar-brand
+{
+    color: #000;
+}
+.navbar-default .navbar-nav li a
+{
+    color:#000;
+}
+.navbar-default .navbar-nav li a:hover
+{
+    color:#000;
+}
+.navbar-default .navbar-nav li
+{
+    font-size: 1.2em;
+    border-bottom: 2px solid transparent;
+}
+.dropdown-header
+{
+    color: #000;
+    font-weight: bold;
+}
+textarea
+{
+    resize:none;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a
+{
+    color: #000;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover
+{
+    color: #000;
+}
+.push
+{
+    margin-top: 2%;
+}
+.well2
+{
+    margin: 4% 0% 2% 0%;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+}
+.well2 .len50
+{
+    margin: 1.2% auto;
+}
+.copyright img
+{
+    max-width: 100px;
+    padding: 0%;
+}
+.ui-autocomplete 
+{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+.ui-autocomplete > li > div 
+{
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.ui-state-hover,.ui-state-active,.ui-state-focus 
+{
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.ui-helper-hidden-accessible 
+{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+@media screen and (max-width:970px)
+{
+    .len50
+    {
+        width: 70%;
+    }
+}
+@media screen and (max-width:768px)
+{
+    .len50
+    {
+        width: 80%;
+    }
+}
+@media screen and (max-width:480px)
+{
+    .g-recaptcha
+    {
+        width: 80%;
+    }
+    .request_table
+    {
+        font-size: 0.6em;
+    }
+    .len50
+    {
+        width: 100%;
+    }
+    .logo
+    {
+        margin-top: 7%;
+    }
+    .login
+    {
+        margin-top: 7%;
+        padding: 4%;
+    }
+    .logo_panel
+    {
+        max-width: 150px;
+        margin-left: 2%;
+    }
+    .holder
+    {
+        width: 100%;
+    }
+    .shield
+    {
+        height: 40px;
+    }
+}

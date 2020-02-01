@@ -1,0 +1,9 @@
+[13-Sep-2017 17:44:00 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Orders.php on line 26
+[13-Sep-2017 17:44:06 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Orders.php on line 26
+[13-Sep-2017 17:44:50 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Orders.php on line 26
+[13-Sep-2017 17:44:53 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Orders.php on line 26
+[13-Sep-2017 17:46:07 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Orders.php on line 26
+[13-Sep-2017 17:46:10 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Orders.php on line 26
+[13-Sep-2017 17:46:29 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Premium.php on line 200
+[13-Sep-2017 17:46:49 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Premium.php on line 200
+[13-Sep-2017 17:48:26 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/admin_zone/models/class.Premium.php on line 200

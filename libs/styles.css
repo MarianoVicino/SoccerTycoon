@@ -1,0 +1,520 @@
+@font-face 
+{
+    font-family: 'Roboto';
+        src: url('fonts/Roboto-Light.ttf');
+}
+body
+{
+    background: url("images/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+@media (min-width: 319px) and (max-width: 389px) {
+    .nav-bg-2{
+       margin-right: auto; 
+       background: rgba(24,93,72,0.3);    
+    }
+    .scale-barra{
+        transform: scale(0.82);
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .respon{
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+    .resize{
+        transform: scale(0.92);
+    }
+}
+@media (min-width: 390px){
+    .nav-bg-2{
+       margin-right: auto;     
+       background: rgba(24,93,72,0.3);
+    }
+}
+
+.trophies
+{
+    margin-left: 4%;
+}
+
+.loading
+{
+    width:100px;
+    height: auto;
+    padding-top: 30%;
+}
+.len50
+{
+    width: 70%;
+}
+#rest-form
+{
+    display: none;
+}
+.module-title
+{
+    margin-bottom: 2%;
+}
+.slogan
+{
+    margin-top: 3%;
+}
+.register-box
+{
+    margin-top: 1%;
+    padding: 2%;
+    background: rgba(0,0,0,0.5);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+#button_submit
+{
+    margin-top:2%;
+    margin-bottom:0%;
+}
+.g-recaptcha
+{
+    width: 50%;
+    margin: 0 auto;
+}
+.social_media
+{
+    margin: 0% 0% 1% 0%;
+}
+.social_media img
+{
+    width: 30px;
+    height:30px;
+    margin: 0% 0.2%;
+    display: inline-block;
+}
+.shirts_box
+{
+    margin-bottom: 4%;
+}
+.shirt
+{
+    margin-top: 2%;
+}
+.shirt_image
+{
+    max-width: 64px;
+    max-height: 64px;
+    margin-bottom: 4%;
+}
+
+.button-register
+{
+    width: 100%;
+}
+.navbar-default
+{
+    background-color: transparent;
+    border:0px transparent;
+    padding: 0%;
+    margin: 0.5% 0% 0.5% 0%;
+}
+.icon-menu2
+{
+    margin-top: 5%;
+    margin-bottom: 6.5%;
+    width: 14px;
+    height: 14px;
+}
+#footer
+{
+    margin-top: 2%;
+}
+#footer a
+{
+    color: #fff;
+}
+.modal-body,.modal-title
+{
+    color:#000;
+}
+.navbar-user
+{
+    padding: 0%;
+}
+.navbar-user .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover
+{
+    background: transparent;
+    color: #fff;
+}
+.logo_panel_user
+{
+    margin-top: 5%;
+}
+.dropdown-menu
+{
+    background: rgba(0,0,0,0.5);
+    top:110%;
+}
+.dropdown-menu > li > a:hover
+{
+    background-color: transparent;
+    margin-left: 3px;
+}
+/* DASHBOARD  MENU */
+.dashboard_link
+{
+    text-align: center;
+}
+.dashboard_link > a > span
+{
+    width: 100%;
+}
+.dashboard_link > a > span > img
+{
+    width: 100%;
+}
+/*.nav-bg-2
+{
+    background: rgba(24,93,72,0.3);
+}*/
+.coins
+{
+    margin-top:2%;
+}
+.coins img
+{
+   height: 22px;
+   width: auto;
+}
+.table-positions
+{
+    margin-top: 2%;
+}
+.first_table
+{
+    background: rgba(12,239,137,0.2);
+}
+.last_table
+{
+    background: rgba(177,58,70,0.3);
+}
+.first
+{
+    font-weight: bolder;
+}
+.table .first td
+{
+    border-top: 0px solid transparent;
+}
+/*DASHBOARD  */
+.dashboard-content
+{
+    width: 98%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.dashboard-item-box
+{
+    background: rgba(23,90,72,0.3);
+    padding: 3% 3% 3% 3%;
+    box-sizing: border-box;
+}
+.team-logo
+{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+.division-logo
+{
+    width: auto;
+    height: 50px;
+}
+.push
+{
+    margin-top: 6%;
+}
+.nom-nop
+{
+    margin:0%;
+    padding: 0%;
+}
+.mini-team-logo
+{
+    width: 20px;
+    height: 20px;
+}
+.mini-team-trophy
+{
+    width: 13px;
+    height: 13px;
+}
+.ranking_box, .historic_box, .referral_box
+{
+    background: rgba(0,0,0,0.5);
+    padding: 1.5% 0.5%;
+    box-sizing: border-box;
+    margin-bottom: 1%;
+}
+.referral_name{
+	border-right: 2px solid gray;
+	margin-right: 10px;
+	float: left;
+	width: 20%;
+}
+
+.referral_user{
+	border-right: 2px solid gray;
+	margin-right: 10px;
+	float: left;
+	width: 20%;
+}
+
+.historic_date{
+    border-right: 2px solid gray;
+    margin-right: 10px;
+    float: left;
+    width: 150px;
+}
+.ranking_box .goals_box
+{
+    background: rgba(105,109,182,0.3);
+    padding: 0.2% 0.5%;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+.nom-nop .goals_box,
+.clock_box{
+    color: #33FF33;
+    font-weight: 700;
+}
+
+.news_box
+{
+    background:none;
+    padding: 1.5% 0.5%;
+}
+.news_box h3
+{
+    background: rgba(0,0,0,0.3);
+    padding: 1% 0.5%;
+    margin-bottom: 1%;
+    border-radius: 3px;
+}
+.news_box .text
+{
+    padding: 0% 1%;
+}
+.ranking_number
+{
+    padding-left: 1%;
+    padding-right: 3%;
+}
+.ranking_box .ranking_score
+{
+    color:#44ff00;
+}
+.show_more
+{
+    padding: 1% 2%;
+    background: rgba(0,0,0,0.4);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color:#fff;
+}
+.show_more:hover
+{
+    background: rgba(0,0,0,0.5);
+    color:#fff;
+    text-decoration: none;
+}
+.market_player_box
+{
+    margin:1% 0%;
+    padding: 0%;
+}
+.market_player_box .player_box
+{
+    padding: 0%;
+    box-sizing: border-box;
+    margin: 0%;  
+}
+.player_box .thumbnail
+{
+    background: rgba(0,0,0,0.5);
+    border:0px;
+    padding: 3%;
+    margin: 2% 2% 2% 2%;
+}
+.thumbnail img
+{
+    border-radius: 3px;
+}
+.thumbnail p,.thumbnail h4,.thumbnail h5
+{
+    color:#fff;
+}
+.caption span
+{
+    background: rgba(105,109,182,0.3);
+    padding: 2% 3%;
+    border-radius: 3px;
+    color: #fff;
+}
+.caption img
+{
+    width: 13px;
+    height: auto;
+}
+.market_player_box .player_info
+{
+    margin: 5%;
+}
+.market_player_box .player_price
+{
+    margin: 5%;
+}
+.buy,.buy_pl_upgrade,.buy_tm_upgrade,.buy_trade,.buy_coins
+{
+    width: 100%;
+}
+.more_player
+{
+    margin-top:100px;
+}
+.help_box
+{
+    margin: 0%;
+    padding: 0.5% 1%;
+    background: rgba(0,0,0,0.4);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.help_box:hover
+{
+    background: rgba(0,0,0,0.5);
+}
+.market_master .market_title
+{
+    color:#fff;
+}
+.market_master
+{
+    color:#000;
+}
+.market_upgrade_box
+{
+    padding-top: 2%;
+}
+.market_upgrade_box .caption
+{
+    margin-bottom: 1%;
+}
+.lang2
+{
+    margin: 2% 0%;
+}
+.lang img,.lang2 img
+{
+    border-radius: 6px;
+    opacity: 0.9;
+}
+.lang2 img
+{
+    width: 50px;
+    height: auto;
+}
+.withdrawal_values
+{
+    padding: 1% 1%;
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+@media screen and (max-width:1000px)
+{
+    .len50
+    {
+        width: 85%;
+    }
+    .slogan
+    {
+        margin-top: 10%;
+    }
+}
+@media (max-width: 768px)
+{
+    .navbar-nav-user>li>a 
+    {
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .push-sm
+    {
+        margin:6% 0%;
+    }
+    .logo_panel_user
+    {
+        margin-top: 0.6%;
+        margin-bottom: 1.2%;
+    }
+    .icon-menu2
+    {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+}
+@media screen and (max-width:500px)
+{
+    .ranking_box .goals_box
+    {
+        padding: 0.5% 1%;
+    }
+    .news_box h3
+    {
+        font-size: 1.3em;
+        margin-bottom: 2%;
+        padding: 2% 1%;
+    }
+    .len50
+    {
+        width: 95%;
+    }
+    .slogan
+    {
+        margin-top: 18%;
+    }
+    .coins
+    {
+       margin-top: 0%;
+    }
+    .logo_panel_user
+    {
+        margin-top: 0.7%;
+        margin-bottom: 1%;
+    }
+    #button_submit
+    {
+        margin-top:4%;
+        margin-bottom:4%;
+    }
+    .ranking_box
+    {
+        padding: 3% 1%;
+    }
+    .ranking_box h4
+    {
+        font-size: 1.1em;
+    }
+    .show_more
+    {
+        padding: 2% 4%;
+    }
+    .table
+    {
+        border:0px;
+    }
+}

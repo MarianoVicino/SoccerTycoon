@@ -1,0 +1,60 @@
+[05-Sep-2017 16:18:58 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:01 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:03 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:13 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:53 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/goalma5/public_html/index.php:2) in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:53 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/index.php:2) in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:53 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/index.php:2) in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:54 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/goalma5/public_html/index.php:2) in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:54 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/index.php:2) in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:19:55 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/index.php:2) in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:20:34 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/index.php:3) in /home/goalma5/public_html/index.php on line 5
+[05-Sep-2017 16:21:47 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:21:50 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:21:53 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:21:54 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:21:55 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:21:56 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:21:57 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:21:58 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:21:59 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:22:00 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/goalma5/public_html/index.php on line 14
+[05-Sep-2017 16:22:07 UTC] PHP Warning:  require_once(./models/class.Connection.php): failed to open stream: No such file or directory in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:22:07 UTC] PHP Fatal error:  require_once(): Failed opening required './models/class.Connection.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:22:10 UTC] PHP Warning:  require_once(./models/class.Connection.php): failed to open stream: No such file or directory in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:22:10 UTC] PHP Fatal error:  require_once(): Failed opening required './models/class.Connection.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/goalma5/public_html/index.php on line 3
+[05-Sep-2017 16:22:26 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/core/models/class.Connection.php:22) in /home/goalma5/public_html/index.php on line 16
+[05-Sep-2017 16:23:11 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/core/models/class.Connection.php:22) in /home/goalma5/public_html/index.php on line 24
+[05-Sep-2017 16:23:46 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/core/models/class.Connection.php:22) in /home/goalma5/public_html/index.php on line 25
+[05-Sep-2017 16:27:43 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/core/models/class.Connection.php:22) in /home/goalma5/public_html/index.php on line 34
+[05-Sep-2017 16:27:57 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/core/models/class.Connection.php:22) in /home/goalma5/public_html/index.php on line 34
+[05-Sep-2017 16:28:58 UTC] PHP Warning:  require_once(../models/class.Fn.php): failed to open stream: No such file or directory in /home/goalma5/public_html/index.php on line 28
+[05-Sep-2017 16:28:58 UTC] PHP Fatal error:  require_once(): Failed opening required '../models/class.Fn.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/goalma5/public_html/index.php on line 28
+[05-Sep-2017 16:29:55 UTC] PHP Warning:  require_once(../models/class.Fn.php): failed to open stream: No such file or directory in /home/goalma5/public_html/index.php on line 28
+[05-Sep-2017 16:29:55 UTC] PHP Fatal error:  require_once(): Failed opening required '../models/class.Fn.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/goalma5/public_html/index.php on line 28
+[05-Sep-2017 16:30:35 UTC] PHP Warning:  require_once(../models/class.Fn.php): failed to open stream: No such file or directory in /home/goalma5/public_html/index.php on line 26
+[05-Sep-2017 16:30:35 UTC] PHP Fatal error:  require_once(): Failed opening required '../models/class.Fn.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/goalma5/public_html/index.php on line 26
+[05-Sep-2017 16:31:13 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/core/models/class.Connection.php:22) in /home/goalma5/public_html/index.php on line 64
+[05-Sep-2017 16:31:47 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/goalma5/public_html/core/models/class.Connection.php:22) in /home/goalma5/public_html/index.php on line 62
+[07-Sep-2017 20:01:20 UTC] PHP Fatal error:  Class 'Builder' not found in /home/goalma5/public_html/core/modules/register.php on line 3
+[08-Sep-2017 18:33:41 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/goalma5/public_html/core/models/class.Builder.php on line 343
+[13-Sep-2017 17:44:49 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:44:55 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:45:00 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:45:08 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:45:11 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:46:02 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:46:08 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:46:56 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:47:04 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[13-Sep-2017 17:48:07 UTC] PHP Fatal error:  Call to a member function bind_result() on boolean in /home/goalma5/public_html/core/models/class.Builder.php on line 970
+[19-Sep-2017 12:53:07 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:08 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:08 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:10 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:11 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:11 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:16 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:19 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:19 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
+[19-Sep-2017 12:53:24 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/goalma5/public_html/index.php on line 60
