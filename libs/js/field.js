@@ -25,7 +25,7 @@ function GetSubstitutesList()
         {
             //$('.titulars').html('');
         },
-        url: 'core/modules/ajax/formation_getsubstitutes_listAjax2.php',
+        url: 'core/modules/ajax/formation_getsubstitutes_listAjax.php',
         type: 'POST',
         async: false,
         success: function(resp)
@@ -163,7 +163,7 @@ function DrawField()
         {
             $('#field').html('<img src="libs/images/loading.gif" class="loading center-block">');
         },
-        url: 'core/modules/ajax/formation_getFieldAjax2.php',
+        url: 'core/modules/ajax/formation_getFieldAjax.php',
         type: 'POST',
         async: true,
         success: function(resp)

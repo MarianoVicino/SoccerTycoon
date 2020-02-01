@@ -64,7 +64,7 @@ $(document).ready(function(){
             processData: false
         });
     });
-    $('#register_form').submit(function(e){
+    $('#register_form').submit(function(e){ 
         e.preventDefault();
         $('#button_submit').attr('disabled','disabled');
         var info = new FormData($(this)[0]);

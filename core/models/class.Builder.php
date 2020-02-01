@@ -550,9 +550,9 @@ class Builder
                           </div>';
                 }    
             }
-            
+             $stmt->close();
         }
-        $stmt->close();
+       
         $stmt2->close();
         $db->close();
     }        

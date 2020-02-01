@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['g-recaptcha-response']))
 {
-    $captcha = $_POST['g-recaptcha-response'];
+   /* $captcha = $_POST['g-recaptcha-response'];
     $privatekey = "6Lc82yAUAAAAAEUxEDPYnM3rbxOmbwYHinpZxuhp";
     $url = 'https://www.google.com/recaptcha/api/siteverify';
     $data = array(
@@ -22,8 +22,8 @@ if(isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['g-recaptcha-r
     $response = curl_exec($ch);
     curl_close($ch);
    $jsonResponse = json_decode($response);
-    if($jsonResponse->success)
-    { 
+    if($jsonResponse->success) 
+    { */
         if(!empty($_POST['user']) && !empty($_POST['pass']))
         {
             require_once("../../models/class.Fn.php");
@@ -43,13 +43,13 @@ if(isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['g-recaptcha-r
         {
             echo '<p class="alert alert-danger">Por favor, no enviar datos vacíos.</p>';
         }
-    }
+    /*}
     else
     {
         echo '<div class="alert alert-danger alert-dismissible" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     Por favor, verificar captcha.
                               </div>';
-    } 
+    } */
 }
 ?>

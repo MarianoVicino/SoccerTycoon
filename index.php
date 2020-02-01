@@ -2,7 +2,8 @@
     session_start();
     ob_start();
 	global $HOME;
-	$HOME = 'https://goalmanageronline.com/';
+	//$HOME = 'https://goalmanageronline.com/';
+    $HOME = 'http://localhost/proyecto%201/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@
             {
                 if($_GET['module']==="formation")
                 {
-                    echo '<link rel="stylesheet" href="'.$HOME.'field.css">';
+                    echo '<link rel="stylesheet" href="'.$HOME.'libs/field.css">';
                 }    
             }    
         ?>

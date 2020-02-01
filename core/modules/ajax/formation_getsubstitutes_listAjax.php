@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("../../models/class.Team2.php");
+require_once("../../models/class.Team.php");
 $team=new Team();
 $team->GetTeamSubstitutes($_SESSION['user_fmo']);
 ?>
