@@ -400,7 +400,7 @@ th {
     width: 1em;
     margin-right: .2em;
     margin-left: .2em;
-    speak: none;
+    speak-as: none;
     position: relative;
     top: .05em;
     text-rendering: auto;
@@ -440,8 +440,8 @@ th {
     font-size: 5em
 }
 
-a.not(.btn)>[class*=" icon"]:before,
-a.not(.btn)>[class^=icon]:before {
+a:not(.btn)>[class*="icon"]:before,
+a:not(.btn)>[class^=icon]:before {
     color: #575757
 }
 
@@ -10338,7 +10338,7 @@ h6+.panel-options {
     border-bottom-left-radius: 3px
 }
 
->.panel-collapse>.list-group:last-child .list-group-item:last-child {
+.panel-collapse>.list-group:last-child .list-group-item:last-child {
     border-bottom-width: 0
 }
 
@@ -11664,7 +11664,7 @@ button.close {
     border: 1px solid #fff;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #000\9;
+    background-color: #000;
     background-color: rgba(0, 0, 0, 0)
 }
 
