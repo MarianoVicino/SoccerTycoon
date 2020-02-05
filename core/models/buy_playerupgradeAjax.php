@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_POST['n']) && isset($_POST['player','player_number']))
+if(isset($_POST['n']) && isset($_POST['player']) && (isset($_POST['player_number']) )
 {
 	$n=intval($_POST['n']);
     $player=intval($_POST['player','player_number']);
@@ -14,5 +14,5 @@ if(isset($_POST['n']) && isset($_POST['player','player_number']))
         $team=new Team();
         $team->BuyPlayerStamina($player, $_SESSION['user_fmo']);
 	}
-}    
-?>
+}   
+?> 

@@ -5,6 +5,7 @@
 	//$HOME = 'https://goalmanageronline.com/';
     $HOME = 'http://localhost/proyecto%201/';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,14 +36,14 @@
         <script src="<?= $HOME; ?>libs/js/functions.js"></script> 
         
         
-        <script>
+        <!--<script> 
             var captcha1;
             var captcha2;
             var CaptchaCallback = function() {
                 captcha1=grecaptcha.render(document.getElementById('captcha1'), {'sitekey' : '6Lc4ByEUAAAAABbAH5_I23QM3lg1sQ1wbXSiZUyk'});
                 captcha2=grecaptcha.render(document.getElementById('captcha2'), {'sitekey' : '6Lc82yAUAAAAAJlsS-OKST0Emn55ZhwmD3OM5xaq'});
             };
-        </script>
+        </script> -->
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
