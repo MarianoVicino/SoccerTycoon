@@ -15,9 +15,13 @@ body
     color: #fff;
     
 }
-.menu-box, .btn-warning, .btn-danger, .nav-bg-2{
+ .btn-warning, .btn-danger {
     background-color: #333 !important;
     BORDER:none;
+}
+.menu-box,.nav-bg-2{
+    background-color: #333 !important;
+    opacity: 0.9;
 }
 .modal-content{
     background-color: rgba(0,0,0,0.5);
