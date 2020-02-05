@@ -5,13 +5,29 @@
 }
 body
 {
-    background: url("images/background.jpg") no-repeat center center fixed;
+    background: url("images/background-estadio.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
     color: #fff;
+}
+.menu-box, .btn-warning, .btn-danger{
+    background-color: #333 !important;
+    BORDER:none;
+}
+.modal-content{
+    background-color: rgba(0,0,0,0.5);
+}
+.slogan img{
+    width: 30%;
+    margin-top: -3%;
+}    
+
+.modal-body, .modal-header, .modal-title{
+    color: #fff !important;
+    margin-top: 3% !important;
 }
 
 @media (min-width: 319px) and (max-width: 389px) {
@@ -486,6 +502,9 @@ body
     .slogan
     {
         margin-top: 18%;
+    }
+    .slogan img{
+        background-image: url(/libs/images/logo-soccer.png);
     }
     .coins
     {

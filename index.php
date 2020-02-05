@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="SHORTCUT ICON" href="<?= $HOME; ?>libs/images/icon.ico"/>
         <link rel="stylesheet" href="<?= $HOME; ?>libs/bootstrap.min.css">
-        <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?v=2">      
+        <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?nocache=">      
 <meta name="description" content="GoalManager is a strategy soccer game, in which you have the posibility to convert your virtual currency into real money."/> 
         <?php 
             if(isset($_GET['module']))
