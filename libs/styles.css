@@ -13,7 +13,7 @@ body
     font-family: 'Roboto', sans-serif;
     color: #fff;
 }
-.menu-box, .btn-warning, .btn-danger{
+.menu-box, .btn-warning, .btn-danger, .nav-bg-2{
     background-color: #333 !important;
     BORDER:none;
 }
