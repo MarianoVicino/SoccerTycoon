@@ -1,7 +1,8 @@
 @font-face 
 {
-    font-family: 'Roboto';
-        src: url('fonts/Roboto-Light.ttf');
+    font-family: 'Roboto Slab', serif;
+        src: url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+        
 }
 body
 {
@@ -12,6 +13,7 @@ body
     background-size: cover;
     font-family: 'Roboto', sans-serif;
     color: #fff;
+    
 }
 .menu-box, .btn-warning, .btn-danger, .nav-bg-2{
     background-color: #333 !important;
