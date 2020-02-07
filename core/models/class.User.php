@@ -89,7 +89,7 @@ class User
                 $nombre=$user." team";
                 $password=hash('sha512', mb_strtolower($password,'UTF-8'));
                 $email=mb_strtolower($email,'UTF-8');
-                $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario=?,clave=?,email=?,oro=0,fantasma=0,referral=? WHERE idEquipos=?;");
+                $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario=?,clave=?,email=?,oro=0,fantasma=0,referral=?,asignado=0 WHERE idEquipos=?;");
                 $stmt->bind_param("ssssii", $nombre,$user,$password,$email,$ref,$id_e_team);
                 $stmt->execute();
                 $name_stadium=$user." Stadium";

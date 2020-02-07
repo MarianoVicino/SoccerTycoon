@@ -32,6 +32,14 @@
                             </ul>
                         </li>
                         <li class="dropdown">
+                            <a href="index.php?module=nuevo"><span class="glyphicon glyphicon-star"></span> Nuevo ususario</a>
+                            <!--<ul class="dropdown-menu">
+                                <li><a href="index.php?module=add_division"><span class="glyphicon glyphicon-chevron-right"></span> Agregar División</a></li>
+                                <li><a href="index.php?module=edit_division"><span class="glyphicon glyphicon-chevron-right"></span> Editar División</a></li>
+                                <li><a href="index.php?module=show_divisions"><span class="glyphicon glyphicon-chevron-right"></span> Ver Divisiones</a></li>
+                            </ul>-->
+                        </li>
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-fire"></span> Premium <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-header">JUGADORES</li>

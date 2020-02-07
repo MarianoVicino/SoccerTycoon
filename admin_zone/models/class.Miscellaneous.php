@@ -266,19 +266,23 @@ class Miscellaneous
         {
             $stmt->fetch();
             $nombre="Team ".($id_team-1);
-            $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario='',clave='',email='',email_paypal='',email_mercadopago='',email_neteller='',fantasma=1 WHERE usuario=?;");
+            $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario='',clave='',email='',email_paypal='',email_mercadopago='',email_neteller='',fantasma=1,asignado=1 WHERE usuario=?;");
             $stmt->bind_param("ss", $nombre,$user);
             $stmt->execute();
-            if($rangue==4)
-            {
+            /*if($rangue==4)
+            {*/
                 if($full==1)
                 {
                     $full=0;
                 }
-                $stmt=$db->prepare("UPDATE Ligas SET equipos_reales=equipos_reales-1,full=? WHERE idLigas=?;");
-                $stmt->bind_param("ii", $full,$id_league);
-                $stmt->execute();
-            }    
+                $buscar = mysqli_query($db, "SELECT equipos_reales FROM `ligas` WHERE idLigas='".$id_league."'");
+                if($buscar->num_rows >0){
+                    $stmt=$db->prepare("UPDATE Ligas SET equipos_reales=equipos_reales-1,full=? WHERE idLigas=?;");
+                    $stmt->bind_param("ii", $full,$id_league);
+                    $stmt->execute();
+                }
+                
+            //}    
             $stmt->close();
             $db->close();
             echo '<div class="alert alert-success alert-dismissible" role="alert">

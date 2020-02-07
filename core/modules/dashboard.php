@@ -1,6 +1,22 @@
         <!-- LEAGUE TABLE -->
        
+        <?php
+        //reviso que no exista un usuario con ese id ni mail
+        $sql = mysqli_query($db, "SELECT * FROM Equipos WHERE usuario='".$_SESSION['user_fmo']."'");
+        $re = mysqli_fetch_array($sql);
+
+        if($re['asignado'] == 0){ ?>
+        <div class="col-md-9 col-sm-7 push-sm col-xs-12">
+          
+        <div class="dashboard-item-box text-center">
+    <h2 class="text-center nom-nop" style="color:orange">Titulo</h2>
+    <p>Texto</style></p>
+           </div>  <br/>
+        </div>
+        <?php }else{ ?>
+
         
+
           <div class="col-md-9 col-sm-7 push-sm col-xs-12">
           
         <div class="dashboard-item-box text-center">
@@ -42,3 +58,4 @@
                 </table>
             </div>
         </div>
+<?php } ?>
