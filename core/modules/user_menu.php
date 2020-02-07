@@ -1,6 +1,9 @@
 <?php 
     require_once("core/models/class.Builder.php");
     $builder=new Builder();
+    //reviso que no exista un usuario con ese id ni mail
+    $sql = mysqli_query($db, "SELECT * FROM Equipos WHERE usuario='".$_SESSION['user_fmo']."'");
+    $re = mysqli_fetch_array($sql);
 ?>
 <style type="text/css">
     body
@@ -47,6 +50,7 @@
                             <li class="dashboard_link"><a href="http://www.forum.goalmanageronline.com/index.php" target="_blank"><span class="glyphicon glyphicon-comment"></span>Forum</a></li>
                             <li class="dashboard_link"><a href="?module=news"><span class="glyphicon glyphicon-bullhorn"></span>News</a></li>
                             <li class="dashboard_link"><a href="?module=rules"><span class="glyphicon glyphicon-file"></span>Rules/ Guide</a></li>
+                            <?php if($re['asignado'] == 1){ ?>
                             <li class="dropdown dashboard_link">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-retweet"></span>Trade</a>
                                 <ul class="dropdown-menu">
@@ -74,6 +78,7 @@
                                     <li><a href="?module=fixture"><span class="glyphicon glyphicon-chevron-right"></span> My Fixture</a></li>
                                 </ul>
                             </li>
+                            <?php } ?>
                             <li class="dashboard_link"><a href="?module=buy_coins"><span class="glyphicon glyphicon-plus-sign"></span>Buy Coins</a></li>
                             <li class="dashboard_link"><a href="?module=referrals"><span class="glyphicon glyphicon-user"></span>Referrals</a></li>
                             <li class="dropdown dashboard_link">
