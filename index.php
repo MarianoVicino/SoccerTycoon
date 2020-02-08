@@ -3,7 +3,7 @@
     ob_start();
 	global $HOME;
 	//$HOME = 'https://goalmanageronline.com/';
-    $HOME = 'http://localhost/proyecto 1/';
+    $HOME = 'http://localhost/SoccerTycoon/';
     include("core/models/class.Connection.php");
     $db=new Connection();
 ?>
