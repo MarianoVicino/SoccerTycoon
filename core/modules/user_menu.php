@@ -40,9 +40,14 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="index.php">
-                            <img src="libs/images/logo.png" class="logo_panel logo_panel_user">
-                        </a>
+                        <a href="http://localhost/SoccerTycoon/index.php">
+                                    <img  svg="" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 560 288" style="enable-background:new 0 0 560 288;" xml:space="preserve" class="logo_panel logo_panel_user">
+<style type="text/css">
+	.st0{font-family:'BookAntiqua-BoldItalic';color:#fff;}
+	.st1{font-size:35.5036px;}
+</style>
+<text transform="matrix(1 0 0 1 125.9769 140.1446)" class="st0 st1">SOCCER TYCOON</text>
+                                </a>
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="border:0px transparent;">
                         <ul class="nav navbar-nav navbar-nav-user navbar-right">
