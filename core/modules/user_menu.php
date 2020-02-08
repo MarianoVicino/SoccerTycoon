@@ -14,7 +14,6 @@
         -o-background-size: cover;
         background-size: cover;
     }
-	
 	ul.two-col{
 		columns: 2 !important;
 		margin-top: 24% !important;

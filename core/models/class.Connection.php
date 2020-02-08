@@ -9,6 +9,7 @@ class Connection extends mysqli
         $this->set_charset('utf8');
         $this->connect_errno ? die('There are problems with the connection.') : $x = 'Connected';
         unset($x);
+        
     }  
     public function Recorrer($x)
     {
