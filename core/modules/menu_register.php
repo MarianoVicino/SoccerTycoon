@@ -16,7 +16,7 @@
                                     <img svg version="1.1" id="Capa_1" class="logo_panel"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 560 288" style="enable-background:new 0 0 560 288;" xml:space="preserve">
                                         <style type="text/css">
 	                                        .st0{font-family:'BookAntiqua-BoldItalic';}
-                                        	.st1{font-size:35.5036px;color:#FFF;}
+                                        	.st1{font-size:30px;color:#FFF;}
                                         </style>
                                     <text transform="matrix(1 0 0 1 125.9769 140.1446)" class="st0 st1">SOCCER TYCOON</text>
                                          
