@@ -23,6 +23,61 @@
                                     font-size: 30px;
                                     color: #FFF;
                                 }
+
+                                .btn-g {
+                                    box-shadow: inset 0px 1px 0px 0px #cf866c;
+                                    background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+                                    background-color: #d0451b;
+                                    border-radius: 3px;
+                                    border: 1px solid #942911;
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    color: #ffffff;
+                                    font-family: Arial;
+                                    font-size: 13px;
+                                    padding: 6px 24px;
+                                    text-decoration: none;
+                                    text-shadow: 0px 1px 0px #854629;
+
+                                }
+
+                                .btn-g:hover {
+                                    background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+                                    background-color: #bc3315;
+                                }
+
+                                .btn-g:active {
+                                    position: relative;
+                                    top: 1px;
+                                }
+
+                                
+                                .btn-fb {
+                                    box-shadow: inset 0px 1px 0px 0px #9fb4f2;
+                                    background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+                                    background-color: #7892c2;
+                                    border-radius: 3px;
+                                    border: 1px solid #4e6096 !important;
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    color: #ffffff !important;
+                                    font-family: Arial;
+                                    font-size: 13px;
+                                    padding: 6px 24px;
+                                    text-decoration: none;
+                                    text-shadow: 0px 1px 0px #283966 !important;
+                                }
+
+                                .btn-fb:hover {
+                                    background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+                                    background-color: #476e9e;
+                                }
+
+                                .btn-fb:active {
+                                    position: relative;
+                                    top: 1px;
+                                }
+                                
                             </style>
                             <text transform="matrix(1 0 0 1 125.9769 140.1446)" class="st0 st1">SOCCER TYCOON</text>
 
@@ -30,15 +85,38 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="border:0px transparent;">
                         <ul class="nav navbar-nav navbar-right">
-                            <div class="form-group input-group">
-                                <span id="open_login" class="input-group-addon login"  data-target="#modalLogin"><span class="glyphicon glyphicon-user"></span></span>
-                                <input type="text" name="user" class="form-control" maxlength="12" minlength="4" placeholder="USER" required="">
-                            </div>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon login" data-toggle="modal" ><span class="glyphicon glyphicon-lock"></span></span>
-                                <input type="password"  name="password" maxlength="12" minlength="4" class="form-control" placeholder="PASSWORD" required="">
-                            </div>
-                            <button type="submit" class="btn btn-primary center-block button-register" id="button_submit">LOGIN</button>
+                            <header class="head-form">
+                                <h2>Log In</h2>
+                                <p>WITH FACEBOOK OR GOOGLE</p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="social-buttons">
+                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
+                                            <a href="#" class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>
+                                            <P CLASS="HEAD-FORM">OR</P>
+                                        </div>
+
+                            </header>
+
+                            <form method="POST" action="#" id="login_form">
+                                <div class="modal-body">
+                                    <div id="msj_login"></div>
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input type="text" name="user" class="form-control log-control" minlength="4" maxlength="12" placeholder="USERNAME" required="">
+                                    </div>
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                        <input type="password" name="password" class="form-control log-control" minlength="4" maxlength="12" placeholder="PASSWORD" required="">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary" id="button_login">LOGIN</button>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modalLostPassword" data-dismiss="modal">LOST PASSWORD</button>
+
+                                </div>
+                            </form>
+
 
                         </ul>
                     </div>
