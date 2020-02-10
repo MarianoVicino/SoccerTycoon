@@ -23,7 +23,6 @@ body
     background-color: #333 !important;
     opacity: 0.9;
 }
-
 .modal-content{
     background-color: rgba(0,0,0,0.5);
 }
@@ -117,9 +116,6 @@ body
     height:30px;
     margin: 0% 0.2%;
     display: inline-block;
-}
-.input-group .form-control{
-    width: 30%!important;
 }
 .shirts_box
 {
