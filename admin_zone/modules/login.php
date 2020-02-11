@@ -44,7 +44,7 @@ $(document).ready(function(){
             <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-lock"></span></span>
             <input type="password" class="form-control" placeholder="CONTRASEÑA" name="pass" minlength="4" maxlength="12" required="">
         </div>
-        <div class="g-recaptcha" data-sitekey="6Lc82yAUAAAAAJlsS-OKST0Emn55ZhwmD3OM5xaq"></div>
+        <div class="g-recaptcha" data-sitekey="6LeFodcUAAAAAJnyVVYK5c2tIMGuBPaGguSylVVJ"></div>
         <button type="submit" class="btn btn-default center-block" name="submit" id="button_login">ENTRAR</button>    
     </form>
 </div>   
