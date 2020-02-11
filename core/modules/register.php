@@ -81,7 +81,7 @@ $(document).ready(function(){
             {
                 $('#msj').html(resp);
                 $('#button_submit').removeAttr('disabled');
-                // grecaptcha.reset(captcha1);
+                grecaptcha.reset(captcha1);
             },
             error: function(jqXRH,estado,error)
             {
@@ -129,6 +129,9 @@ $(document).ready(function(){
                         $builder->GetRegions(); 
                     ?>
                 </select>
+            </div>
+            <div class="form-group">
+                <a href="<?php //echo $google_client->createAuthUrl(); ?>">Google</a>
             </div>
             <div id="captcha1"></div>
             <button type="submit" class="btn btn-primary center-block button-register" id="button_submit">REGISTER</button>

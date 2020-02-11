@@ -42,8 +42,8 @@
             var captcha1;
             var captcha2;
             var CaptchaCallback = function() {
-                captcha1=grecaptcha.render(document.getElementById('captcha1'), {'sitekey' : '6Lc4ByEUAAAAABbAH5_I23QM3lg1sQ1wbXSiZUyk'});
-                captcha2=grecaptcha.render(document.getElementById('captcha2'), {'sitekey' : '6Lc82yAUAAAAAJlsS-OKST0Emn55ZhwmD3OM5xaq'});
+                captcha1=grecaptcha.render(document.getElementById('captcha1'), {'sitekey' : '6LeFodcUAAAAAJnyVVYK5c2tIMGuBPaGguSylVVJ'});
+                captcha2=grecaptcha.render(document.getElementById('captcha2'), {'sitekey' : '6LeFodcUAAAAAJnyVVYK5c2tIMGuBPaGguSylVVJ'});
             };
         </script> 
         <script>
@@ -59,6 +59,7 @@
 
 
         <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+        
     </head>
     <body>
         <?php
