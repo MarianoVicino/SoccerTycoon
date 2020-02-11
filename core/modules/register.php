@@ -197,19 +197,6 @@ global $HOME;
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">TOP GLOBAL USERS</h3>
             <div class="center-block  ranking_content">
             </div>
-<<<<<<< HEAD
-=======
-            <div class="form-group">
-                <a href="<?php //echo $google_client->createAuthUrl(); ?>">Google</a>
-            </div>
-            <div id="captcha1"></div>
-            <button type="submit" class="btn btn-primary center-block button-register" id="button_submit">REGISTER</button>
-        </form>
-    </div>
-    <div class="col-md-6">
-        <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">TOP GLOBAL USERS</h3>
-        <div class="center-block  ranking_content">
->>>>>>> 3025447f1a3ea5d7610b5c95a1c09f08efdba7b2
         </div>
     </div>
 </div>
