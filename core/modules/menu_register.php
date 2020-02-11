@@ -95,7 +95,7 @@
                                         
                                             <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
                                             <a href="#" class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>
-                                            <P CLASS="HEAD-FORM">OR</P>
+                                            <h2 CLASS="HEAD-FORM">OR</h2>
                                         </div>
 
                             </header>

@@ -174,6 +174,13 @@ body
     background: transparent;
     color: #fff;
 }
+.nav,.modal-footer{
+    text-align: center;
+}
+
+.navbar-nav{
+width: 30%;
+}
 .logo_panel_user
 {
     margin-top: 5%;
