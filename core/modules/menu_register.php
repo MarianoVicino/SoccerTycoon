@@ -91,7 +91,7 @@
                                 <p>WITH FACEBOOK OR GOOGLE</p>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="social-buttons">
+                                        <div class="social-buttons" method="POST" action="#" id="login_form" >
                                         
                                             <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
                                             <a href="#" class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>
