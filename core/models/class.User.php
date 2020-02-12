@@ -32,11 +32,16 @@ class User
                           </div>';
         }
     }
-    public function AddUser($region,$user,$password,$email,$ref)
+    public function AddUser($region,$user,$password,$email,$ref,$fr)
     {
         $user=mb_strtolower($user,'UTF-8');
         $email=mb_strtolower($email,'UTF-8');
-        require_once("../../models/class.Connection.php");
+        if($fr){
+            require_once("../../models/class.Connection.php");
+        }else{
+            require_once("../models/class.Connection.php");
+        }
+        
         $db=new Connection();
         //reviso que no exista un usuario con ese id ni mail
         $stmt=$db->prepare("SELECT * FROM Equipos WHERE usuario=? OR email=?;");

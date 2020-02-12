@@ -6,6 +6,7 @@
     $HOME = 'http://localhost/SoccerTycoon/';
     include("core/models/class.Connection.php");
     $db=new Connection();
+    
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +18,8 @@
         <link rel="SHORTCUT ICON" href="<?= $HOME; ?>libs/images/icon.ico"/>
         <link rel="stylesheet" href="<?= $HOME; ?>libs/bootstrap.min.css">
         <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?nocache=">      
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com">
 <meta name="description" content="GoalManager is a strategy soccer game, in which you have the posibility to convert your virtual currency into real money."/> 
         <?php 
             if(isset($_GET['module']))
