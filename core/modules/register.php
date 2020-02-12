@@ -155,8 +155,17 @@ global $HOME;
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER WITH</h3>
             <div class="social-buttons" method="POST" action="#" id="register_form" class="text-center" style="padding-top:0px; margin-top:0%;text-align:center;">
                                         
-                                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
-                                        <a href="#" class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>
+
+            <!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
+
+            <div class="form-group">
+                <fb:login-button perms="email,user_birthday"></fb:login-button>
+                <!--<div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0&appId=125231578816554&autoLogAppEvents=1"></script>
+                <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>-->
+            </div>
+                                        <a href="#"  class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
+                                        <a href="#" data-onsuccess="onSignIn" class="g-signin2 btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>
                                         
              </div>
 
@@ -164,7 +173,7 @@ global $HOME;
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">OR REGISTER WITH</h3>
             <div id="msj"></div>
             <form method="POST" action="#" id="register_form">
-                <input type="hidden" name="referral" value="<?php echo (isset($_GET['referral']) ? $_GET['referral'] : ''); ?>">
+                <input type="hidden" name="referral" id="referral" value="<?php echo (isset($_GET['referral']) ? $_GET['referral'] : ''); ?>">
                 <div class="form-group input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                     <input type="text" name="user" class="form-control" maxlength="12" minlength="4" placeholder="USER" required>
@@ -213,3 +222,86 @@ global $HOME;
     </div>
     <p class="text-center">A free soccer manager game online in where you can change your virtual money that you win into REAL MONEY</p>
 </footer>
+<script>
+function onSignIn(googleUser) {
+        var referral = document.getElementById('referral').value;
+      var profile = googleUser.getBasicProfile();
+      var info2 = new FormData();
+      info2.append('ID',profile.getId());
+      info2.append('Full Name',profile.getName());
+      info2.append('Email',profile.getEmail());
+      info2.append('referral',referral);
+      $.ajax({
+            beforeSend: function()
+            {
+                $('#msj').html('<p class="alert alert-info">Loading ...</p>');
+            },
+            url: '<?= $HOME; ?>core/modules/registergoogle.php',
+            type: 'POST',
+            data: info2,
+            async: true,
+            success: function(resp)
+            {
+                location.reload();
+            },
+            error: function(jqXRH,estado,error)
+            {
+                $('#msj').html(error);
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        }); 
+    }
+
+$(function() {
+  $.ajax({
+    url: '//connect.facebook.net/es_ES/all.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      FB.init({
+        appId: '125231578816554',
+        xfbml: true
+      });
+      FB.Event.subscribe('auth.authResponseChange', function(response) {
+        if (response && response.status == 'connected') {
+          FB.api('/me?fields=name,first_name,last_name,email,link,gender,picture', function(response2) {
+
+            var referral = document.getElementById('referral').value;
+              var info3 = new FormData();
+              info3.append('ID',response2.id);
+              info3.append('Full_Name',response2.name);
+              info3.append('Email',response2.email);
+              info3.append('referral',referral);
+              $.ajax({
+                    beforeSend: function()
+                    {
+                        $('#msj').html('<p class="alert alert-info">Loading ...</p>');
+                    },
+                    url: '<?= $HOME; ?>core/modules/registerfacebook.php',
+                    type: 'POST',
+                    data: info3,
+                    async: true,
+                    success: function(resp)
+                    {
+                        location.reload();
+                    },
+                    error: function(jqXRH,estado,error)
+                    {
+                        $('#msj').html(error);
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                }); 
+            //alert('Nombre: ' + response2.name);
+          });
+        }
+      });
+    }
+  });
+});
+</script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
