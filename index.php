@@ -6,7 +6,7 @@
     $HOME = 'http://localhost/SoccerTycoon/';
     include("core/models/class.Connection.php");
     $db=new Connection();
-    
+
 ?>
 
 <!DOCTYPE html>

@@ -133,6 +133,12 @@ $(document).ready(function(){
             <div class="form-group">
                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
             </div>
+            <div class="form-group">
+                <fb:login-button perms="email,user_birthday"></fb:login-button>
+                <!--<div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0&appId=125231578816554&autoLogAppEvents=1"></script>
+                <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false"></div>-->
+            </div>
             <div id="captcha1"></div>
             <button type="submit" class="btn btn-primary center-block button-register" id="button_submit">REGISTER</button>
         </form>
@@ -160,7 +166,7 @@ $(document).ready(function(){
 <script>
 
     function onSignIn(googleUser) {
-        var referral = document.getElementById('referral').value;
+      var referral = document.getElementById('referral').value;
       var profile = googleUser.getBasicProfile();
       var info2 = new FormData();
       info2.append('ID',profile.getId());
@@ -189,7 +195,54 @@ $(document).ready(function(){
             processData: false
         }); 
     }
+  $(function() {
+  $.ajax({
+    url: '//connect.facebook.net/es_ES/all.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      FB.init({
+        appId: '125231578816554',
+        xfbml: true
+      });
+      FB.Event.subscribe('auth.authResponseChange', function(response) {
+        if (response && response.status == 'connected') {
+          FB.api('/me?fields=name,first_name,last_name,email,link,gender,picture', function(response2) {
 
+            var referral = document.getElementById('referral').value;
+              var info3 = new FormData();
+              info3.append('ID',response2.id);
+              info3.append('Full_Name',response2.name);
+              info3.append('Email',response2.email);
+              info3.append('referral',referral);
+              $.ajax({
+                    beforeSend: function()
+                    {
+                        $('#msj').html('<p class="alert alert-info">Loading ...</p>');
+                    },
+                    url: '<?= $HOME; ?>core/modules/registerfacebook.php',
+                    type: 'POST',
+                    data: info3,
+                    async: true,
+                    success: function(resp)
+                    {
+                        location.reload();
+                    },
+                    error: function(jqXRH,estado,error)
+                    {
+                        $('#msj').html(error);
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                }); 
+            //alert('Nombre: ' + response2.name);
+          });
+        }
+      });
+    }
+  });
+});
   </script>
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
