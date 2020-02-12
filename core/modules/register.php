@@ -151,6 +151,7 @@ global $HOME;
 
 
     <div class="register-box col-md-12">
+<<<<<<< HEAD
         <div class="center-block col-md-6">
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER WITH</h3>
             <div class="social-buttons" class="text-center" style="padding-top:0px; margin-top:0%;text-align:center;">
@@ -196,6 +197,39 @@ global $HOME;
         <div class="col-md-6">
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">TOP GLOBAL USERS</h3>
             <div class="center-block  ranking_content">
+=======
+    <div class="center-block col-md-6">
+        <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER NOW!</h3>
+        <div id="msj"></div>        
+        <form method="POST" action="#" id="register_form">
+			<input type="hidden" name="referral" id="referral" value="<?php echo (isset($_GET['referral']) ? $_GET['referral'] : ''); ?>">
+            <div class="form-group input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" name="user" class="form-control" maxlength="12" minlength="4" placeholder="USER" required>
+            </div>
+            <div class="form-group input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                <input type="password" name="password" maxlength="12" minlength="4" class="form-control" placeholder="PASSWORD" required>
+            </div>
+            <div class="form-group input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                <input type="password" name="repassword" maxlength="12" minlength="4" class="form-control" placeholder="REPEAT PASSWORD" required>
+            </div>
+            <div class="form-group input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                <input type="email" name="email" maxlength="100" minlength="6" class="form-control" placeholder="E-MAIL" required>
+            </div>
+            <div class="form-group">
+                <select name="region" class="form-control">
+                    <option hidden>Choose a region ...</option>
+                    <?php 
+                        $builder->GetRegions(); 
+                    ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+>>>>>>> 2cb56b36e55911c0bc11b028bc1f87c5c1d2a8fc
             </div>
         </div>
     </div>
@@ -211,5 +245,46 @@ global $HOME;
         </div>
         <p class="text-center"><a href="#" data-toggle="modal" data-target="#modalTycEn">Terms & Conditions</a> - <a href="#" data-toggle="modal" data-target="#modalTycEs">Términos y Condiciones</a></p>
     </div>
+<<<<<<< HEAD
     <p class="text-center">A free soccer manager game online in where you can change your virtual money that you win into REAL MONEY</p>
 </footer>
+=======
+ <p class="text-center">A free soccer manager game online in where you can change your virtual money that you win into REAL MONEY</p>
+</footer>
+<script>
+
+    function onSignIn(googleUser) {
+        var referral = document.getElementById('referral').value;
+      var profile = googleUser.getBasicProfile();
+      var info2 = new FormData();
+      info2.append('ID',profile.getId());
+      info2.append('Full Name',profile.getName());
+      info2.append('Email',profile.getEmail());
+      info2.append('referral',referral);
+      $.ajax({
+            beforeSend: function()
+            {
+                $('#msj').html('<p class="alert alert-info">Loading ...</p>');
+            },
+            url: '<?= $HOME; ?>core/modules/registergoogle.php',
+            type: 'POST',
+            data: info2,
+            async: true,
+            success: function(resp)
+            {
+                location.reload();
+            },
+            error: function(jqXRH,estado,error)
+            {
+                $('#msj').html(error);
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        }); 
+    }
+
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+>>>>>>> 2cb56b36e55911c0bc11b028bc1f87c5c1d2a8fc

@@ -24,7 +24,7 @@ if(isset($_POST['g-recaptcha-response']))
                                 $user=new User();
 								if(isset($_POST['referral']) && $f->Validar_Long($_POST['user'], 4, 12)==1)
 									$ref = $user->GetUserIdByLogin($_POST['referral']);
-								$user->AddUser($id_region, $_POST['user'], $_POST['password'], $_POST['email'], $ref);
+								$user->AddUser($id_region, $_POST['user'], $_POST['password'], $_POST['email'], $ref,true);
                             }
                             else
                             {
