@@ -58,10 +58,13 @@ global $HOME;
                 processData: false
             });
         });
-        $('#register_form').submit(function(e) {
-            e.preventDefault();
+        
+    });
+    function register() {
+            var info2 =  document.forms['formregister'];
+            //e.preventDefault();
             $('#button_submit').attr('disabled', 'disabled');
-            var info = new FormData($(this)[0]);
+            var info =  new FormData(info2);
             $.ajax({
                 beforeSend: function() {
                     $('#msj').html('<p class="alert alert-info">Loading ...</p>');
@@ -73,7 +76,7 @@ global $HOME;
                 success: function(resp) {
                     $('#msj').html(resp);
                     $('#button_submit').removeAttr('disabled');
-                    // grecaptcha.reset(captcha1);
+                    grecaptcha.reset(captcha1);
                 },
                 error: function(jqXRH, estado, error) {
                     $('#msj').html(error);
@@ -82,8 +85,7 @@ global $HOME;
                 contentType: false,
                 processData: false
             });
-        });
-    });
+        };
 </script>
 <style>
     .btn-g {
@@ -155,13 +157,14 @@ global $HOME;
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER WITH</h3>
             <div class="social-buttons" method="POST" action="#" id="register_form" class="text-center" style="padding-top:0px; margin-top:0%;text-align:center;">
                 <a href="#"  class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
-                <a href="#"  class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>              
+                <a href="#"  class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>   
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>           
              </div>
 
             </BR>
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">OR REGISTER WITH</h3>
             <div id="msj"></div>
-            <form method="POST" action="#" id="register_form">
+            <form id="formregister">
                 <input type="hidden" name="referral" id="referral" value="<?php echo (isset($_GET['referral']) ? $_GET['referral'] : ''); ?>">
                 <div class="form-group input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
@@ -188,8 +191,8 @@ global $HOME;
                     </select>
                 </div>
                 <div id="captcha1"></div>
-                <button type="submit" class="btn btn-primary center-block button-register" id="button_submit">REGISTER</button>
             </form>
+            <button class="btn btn-primary center-block button-register" id="button_submit" onclick="register();">REGISTER</button>
         </div>
         <div class="col-md-6">
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">TOP GLOBAL USERS</h3>

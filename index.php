@@ -2,8 +2,11 @@
     session_start();
     ob_start();
 	global $HOME;
-	//$HOME = 'https://goalmanageronline.com/';
-    $HOME = 'http://localhost/SoccerTycoon/';
+    if($_SERVER["HTTP_HOST"] == "localhost"){
+        $HOME = 'http://localhost/SoccerTycoon/';
+    }else{
+        $HOME = 'https://'.$_SERVER["HTTP_HOST"].'/';
+    }
     include("core/models/class.Connection.php");
     $db=new Connection();
 

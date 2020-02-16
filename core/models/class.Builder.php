@@ -1,6 +1,6 @@
 <?php
 
-class Builder
+class Builder 
 {
     public function CountUsers()
     {
@@ -909,7 +909,11 @@ class Builder
 	public function GetRankingIndex()
     {
 		global $HOME;
-		$HOME = 'http://goalmanageronline.com/';
+        if($_SERVER["HTTP_HOST"] == "localhost"){
+        $HOME = 'http://localhost/SoccerTycoon/';
+        }else{
+            $HOME = 'https://'.$_SERVER["HTTP_HOST"].'/';
+        }
 		
         require_once("../../models/class.Connection.php");
         $db=new Connection();
