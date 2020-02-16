@@ -110,7 +110,7 @@ function buascar(donde,vvalor,otrva,lliga,acci) {
                     <?php
                         require_once("../core/models/class.Connection.php");
                         $db=new Connection();
-                        $stmt=$db->prepare("SELECT idEquipos,nombre FROM `equipos` WHERE asignado=0;");
+                        $stmt=$db->prepare("SELECT idEquipos,nombre FROM `Equipos` WHERE asignado=0;");
                         $stmt->bind_result($idEquipos,$nombre);
                         $stmt->execute();
                         while($stmt->fetch())
