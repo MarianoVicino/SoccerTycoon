@@ -9,7 +9,24 @@
     }
     include("core/models/class.Connection.php");
     $db=new Connection();
+    include('google/config.php');
+    if(!isset($_SESSION['user_fmo'])){
+     //Create a URL to obtain user authorization  
+     $login_button = '<a href="'.$google_client->createAuthUrl().'" class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a>';
+    }
 
+    if(isset($_GET["code"])){
+        $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+        if(!isset($token['error'])){
+            $google_client->setAccessToken($token['access_token']);
+            $google_service = new Google_Service_Oauth2($google_client);
+            $data = $google_service->userinfo->get();
+            $referral = "<script>document.getElementById('referral').value;</script>";
+            $ver = logingoogle($data['email'],$referral,$data['name'],$data['id']);
+            $_SESSION['user_fmo'] = $ver;
+            header("Location: index.php");
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +37,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="SHORTCUT ICON" href="<?= $HOME; ?>libs/images/icon.ico"/>
         <link rel="stylesheet" href="<?= $HOME; ?>libs/bootstrap.min.css">
-        <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?nocache=">      
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta name="google-signin-client_id" content="103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com">
+        <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?nocache=">
+        
+        
 <meta name="description" content="GoalManager is a strategy soccer game, in which you have the posibility to convert your virtual currency into real money."/> 
         <?php 
             if(isset($_GET['module']))
@@ -67,7 +84,7 @@
         <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
         
     </head>
-    <body>
+    <body> 
         <?php
             if(isset($_SESSION['user_fmo']))
             {

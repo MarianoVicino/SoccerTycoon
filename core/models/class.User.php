@@ -39,7 +39,7 @@ class User
         if($fr){
             require_once("../../models/class.Connection.php");
         }else{
-            require_once("../models/class.Connection.php");
+            require_once("core/models/class.Connection.php");
         }
         
         $db=new Connection();

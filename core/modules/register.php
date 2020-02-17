@@ -157,8 +157,9 @@ global $HOME;
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER WITH</h3>
             <div class="social-buttons" method="POST" action="#" id="register_form" class="text-center" style="padding-top:0px; margin-top:0%;text-align:center;">
                 <a href="#"  class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
-                <a href="#"  class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>   
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>           
+                <?php echo $login_button; ?>
+                
+                
              </div>
 
             </BR>
@@ -215,37 +216,6 @@ global $HOME;
     <p class="text-center">A free soccer manager game online in where you can change your virtual money that you win into REAL MONEY</p>
 </footer>
 <script>
-function onSignIn(googleUser) {
-        var referral = document.getElementById('referral').value;
-      var profile = googleUser.getBasicProfile();
-      var info2 = new FormData();
-      info2.append('ID',profile.getId());
-      info2.append('Full Name',profile.getName());
-      info2.append('Email',profile.getEmail());
-      info2.append('referral',referral);
-      $.ajax({
-            beforeSend: function()
-            {
-                $('#msj').html('<p class="alert alert-info">Loading ...</p>');
-            },
-            url: '<?= $HOME; ?>core/modules/registergoogle.php',
-            type: 'POST',
-            data: info2,
-            async: true,
-            success: function(resp)
-            {
-                location.reload();
-            },
-            error: function(jqXRH,estado,error)
-            {
-                $('#msj').html(error);
-            },
-            cache: false,
-            contentType: false,
-            processData: false
-        }); 
-    }
-
 $(function() {
   $.ajax({
     url: '//connect.facebook.net/es_ES/all.js',
