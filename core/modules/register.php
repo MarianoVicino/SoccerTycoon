@@ -156,9 +156,9 @@ global $HOME;
         <div class="center-block col-md-6">
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER WITH</h3>
             <div class="social-buttons" method="POST" action="#" id="register_form" class="text-center" style="padding-top:0px; margin-top:0%;text-align:center;">
-                <a href="#"  class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
-                <a href="#"  class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>   
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>           
+                <a href=""  class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div> 
+                    
              </div>
 
             </BR>
