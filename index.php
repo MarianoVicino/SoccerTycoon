@@ -9,25 +9,7 @@
     }
     include("core/models/class.Connection.php");
     $db=new Connection();
-    include('google/config.php');
-    if(!isset($_SESSION['user_fmo'])){
-     //Create a URL to obtain user authorization  
-     $login_button = '<a href="'.$google_client->createAuthUrl().'" class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a>';
-    }
 
-    if(isset($_GET["code"])){
-        $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
-        if(!isset($token['error'])){
-            $google_client->setAccessToken($token['access_token']);
-            $google_service = new Google_Service_Oauth2($google_client);
-            $data = $google_service->userinfo->get();
-            $referral = "<script>document.getElementById('referral').value;</script>";
-            $ver = logingoogle($data['email'],$referral,$data['name'],$data['id']);
-            $_SESSION['user_fmo'] = $ver;
-            header("Location: index.php");
-        }
-    }
-    
 ?>
 
 <!DOCTYPE html>
@@ -38,9 +20,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="SHORTCUT ICON" href="<?= $HOME; ?>libs/images/icon.ico"/>
         <link rel="stylesheet" href="<?= $HOME; ?>libs/bootstrap.min.css">
-        <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?nocache=">
-        
-        
+        <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?nocache=">      
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com">
 <meta name="description" content="GoalManager is a strategy soccer game, in which you have the posibility to convert your virtual currency into real money."/> 
         <?php 
             if(isset($_GET['module']))
@@ -85,7 +67,7 @@
         <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
         
     </head>
-    <body> 
+    <body>
         <?php
             if(isset($_SESSION['user_fmo']))
             {
@@ -140,59 +122,3 @@
 <?php
     ob_end_flush();
 ?>
-<script>
-    
-$(function() {
-  $.ajax({
-    url: '//connect.facebook.net/es_ES/all.js',
-    dataType: 'script',
-    cache: true,
-    success: function() {
-      FB.init({
-        appId: '125231578816554',
-        xfbml: true
-      });
-      FB.Event.subscribe('auth.authResponseChange', function(response) {
-        if (response && response.status == 'connected') {
-          FB.api('/me?fields=name,first_name,last_name,email,link,gender,picture', function(response2) {
-
-            var referral = document.getElementById('referral').value;
-              var info3 = new FormData();
-              info3.append('ID',response2.id);
-              info3.append('Full_Name',response2.name);
-              info3.append('Email',response2.email);
-              info3.append('referral',referral);
-              $.ajax({
-                    beforeSend: function()
-                    {
-                        $('#msj').html('<p class="alert alert-info">Loading ...</p>');
-                    },
-                    url: '<?= $HOME; ?>core/modules/registerfacebook.php',
-                    type: 'POST',
-                    data: info3,
-                    async: true,
-                    success: function(resp)
-                    {
-                        location.reload();
-                    },
-                    error: function(jqXRH,estado,error)
-                    {
-                        $('#msj').html(error);
-                    },
-                    cache: false,
-                    contentType: false,
-                    processData: false
-                }); 
-            //alert('Nombre: ' + response2.name);
-          });
-        }
-      });
-    }
-  });
-});
-function fbLogout() {
-    FB.logout(function() {
-        console.log("se");
-    });
-}
-</script>

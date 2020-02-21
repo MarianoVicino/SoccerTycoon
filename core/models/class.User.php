@@ -36,12 +36,10 @@ class User
     {
         $user=mb_strtolower($user,'UTF-8');
         $email=mb_strtolower($email,'UTF-8');
-        if($fr == 3){
-            require_once("../models/class.Connection.php");
-        }elseif($fr){
+        if($fr){
             require_once("../../models/class.Connection.php");
         }else{
-            require_once("core/models/class.Connection.php");
+            require_once("../models/class.Connection.php");
         }
         
         $db=new Connection();

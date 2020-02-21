@@ -1,6 +1,0 @@
-{
-    "require": {
-        "google/apiclient": "^2.0",
-        "facebook/php-sdk-v4": "^5.7"
-    }
-}
