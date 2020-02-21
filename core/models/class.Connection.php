@@ -5,7 +5,7 @@ class Connection extends mysqli
     {
         //parent::mysqli('localhost', 'goalma5_lucho', 'lucho1995','goalma5_gmo');
         //parent::mysqli('localhost', 'root', '','soccertycoon');
-        parent::__construct('localhost', 'root', '','goalma5');
+        parent::__construct('localhost', 'root', '','goalma5_gmo');
         $this->set_charset('utf8');
         $this->connect_errno ? die('There are problems with the connection.') : $x = 'Connected';
         unset($x);
