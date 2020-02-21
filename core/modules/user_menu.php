@@ -90,7 +90,7 @@
                                     <li><a href="?module=withdrawal_methods"><span class="glyphicon glyphicon-chevron-right"></span> Withdrawls Founds</a></li>
                                     <li><a href="?module=transactions"><span class="glyphicon glyphicon-chevron-right"></span> My Transactions</a></li>
                                     <li><a href="?module=password"><span class="glyphicon glyphicon-chevron-right"></span> Change Password</a></li>
-                                    <li><a href="?module=logout"><span class="glyphicon glyphicon-chevron-right"></span> Logout</a></li>
+                                    <li><a href="?module=logout" onclick="fbLogout();"><span class="glyphicon glyphicon-chevron-right"></span> Logout</a></li>
                                 </ul>
                             </li>
                         </ul>

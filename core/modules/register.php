@@ -159,6 +159,11 @@ global $HOME;
                 <a href=""  class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
                 <div class="g-signin2" data-onsuccess="onSignIn"></div> 
                     
+                
+                <fb:login-button perms="email,user_birthday"></fb:login-button>
+                <?php echo $login_button; ?>
+                
+                
              </div>
 
             </BR>
