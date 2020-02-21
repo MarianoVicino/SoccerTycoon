@@ -156,7 +156,8 @@ global $HOME;
         <div class="center-block col-md-6">
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER WITH</h3>
             <div class="social-buttons" method="POST" action="#" id="register_form" class="text-center" style="padding-top:0px; margin-top:0%;text-align:center;">
-                <a href="#"  class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
+                
+                <fb:login-button perms="email,user_birthday"></fb:login-button>
                 <?php echo $login_button; ?>
                 
                 
@@ -216,6 +217,7 @@ global $HOME;
     <p class="text-center">A free soccer manager game online in where you can change your virtual money that you win into REAL MONEY</p>
 </footer>
 <script>
+    /*
 $(function() {
   $.ajax({
     url: '//connect.facebook.net/es_ES/all.js',
@@ -263,7 +265,7 @@ $(function() {
       });
     }
   });
-});
+});*/
 </script>
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
