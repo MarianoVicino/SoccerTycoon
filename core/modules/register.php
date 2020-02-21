@@ -215,7 +215,37 @@ global $HOME;
     <p class="text-center">A free soccer manager game online in where you can change your virtual money that you win into REAL MONEY</p>
 </footer>
 <script>
-    /*
+function onSignIn(googleUser) {
+        var referral = document.getElementById('referral').value;
+      var profile = googleUser.getBasicProfile();
+      var info2 = new FormData();
+      info2.append('ID',profile.getId());
+      info2.append('Full Name',profile.getName());
+      info2.append('Email',profile.getEmail());
+      info2.append('referral',referral);
+      $.ajax({
+            beforeSend: function()
+            {
+                $('#msj').html('<p class="alert alert-info">Loading ...</p>');
+            },
+            url: '<?= $HOME; ?>core/modules/registergoogle.php',
+            type: 'POST',
+            data: info2,
+            async: true,
+            success: function(resp)
+            {
+                location.reload();
+            },
+            error: function(jqXRH,estado,error)
+            {
+                $('#msj').html(error);
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        }); 
+    }
+
 $(function() {
   $.ajax({
     url: '//connect.facebook.net/es_ES/all.js',
@@ -263,7 +293,7 @@ $(function() {
       });
     }
   });
-});*/
+});
 </script>
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
