@@ -83,6 +83,7 @@
                                 </ul>
                             </li>
                             <li class="dashboard_link"><a href="<?php if($re['asignado'] == 1){ echo '?module=buy_coins';}else{ echo '#';} ?>"><span class="glyphicon glyphicon-plus-sign"></span>Buy Coins</a></li>
+                            <li class="dashboard_link"><a href="<?php if($re['asignado'] == 1){ echo '?module=exchange';}else{ echo '#';} ?>"><span class="glyphicon glyphicon-plus-sign"></span>Exchange</a></li>
                             <li class="dashboard_link"><a href="?module=referrals"><span class="glyphicon glyphicon-user"></span>Referrals</a></li>
                             <li class="dropdown dashboard_link">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span>Account</a>
