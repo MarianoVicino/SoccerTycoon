@@ -156,7 +156,7 @@ global $HOME;
         <div class="center-block col-md-6">
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER WITH</h3>
             <div class="social-buttons" method="POST" action="#" id="register_form" class="text-center" style="padding-top:0px; margin-top:0%;text-align:center;">
-                <a href=""  class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
+            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
                 <div class="g-signin2" data-onsuccess="onSignIn"></div> 
                     
              </div>
@@ -297,3 +297,5 @@ $(function() {
 </script>
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v6.0"></script>
