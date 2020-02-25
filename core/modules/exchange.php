@@ -19,9 +19,14 @@
             <hgroup>
                 <h3 class="nom-nop"><span class="market_title">Exchange</span> <button class="help_box btn btn-link btn-xs" data-toggle="popover" data-placement="bottom" data-container=".market_master" data-title="Help" data-content="Texto"><span class="glyphicon glyphicon-question-sign"></span></button></h3>
             </hgroup>
+            <?php $vvalor_gold = mysqli_query($db, "SELECT precio FROM `Gold`");
+            $re_gold = mysqli_fetch_array($vvalor_gold);
+            ?>
             <div class="col-xs-12 market_player_box">
                 <div id="msj"></div>   
                 <div class="coin_content">
+                    El valor de 1 GOLD esta cotizando en <?php echo $re_gold['precio']; ?> ST.
+                    <hr />
                     <div>
                        Gold: <input type="text" name="gold" id="gold" onKeyPress="return soloNumeros(event)"> pasa a ST<span id="slres"></span><br>
                        <button type="button" onclick="gold('restar');">Cambiar</button><br>
@@ -37,11 +42,24 @@
                 <br>
                 <hr />
                 <div id="chartdiv"></div>
+                <?php
+                $accio = mysqli_query($db, "SELECT * FROM `Gold_acciones` ORDER BY id DESC LIMIT 20");
+                while ($re_accio = mysqli_fetch_array($accio)) {?>
+                    <div class="col-xs-9">
+                       <?php echo $re_accio['texto'] ; ?>
+                    </div>
+                    <div class="col-xs-3">
+                      <?php echo $re_accio['fecha'] ; ?>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>
 </div>   
-
+<?php
+    $ssql = mysqli_query($db, "SELECT gold,oro FROM `Equipos` WHERE usuario='".$_SESSION['user_fmo']."'");
+    $ree_ssql = mysqli_fetch_array($ssql);
+?>
 <script>
     $(document).ready(function(){
         miFormulario = document.getElementById('#gold');
@@ -60,33 +78,45 @@
     });
     function gold(accion) {
         if(accion == "sumar"){
+            var nuevo = <?php echo $ree_ssql['oro']; ?>;
             var precio = document.getElementById("sl").value;
         }else{
+            var nuevo = <?php echo $ree_ssql['gold']; ?>;
             var precio = document.getElementById("gold").value;
         }
-
-        var info = new FormData();
-            info.append('accion',accion);
-            info.append('precio',precio);
-        $.ajax({
-            beforeSend: function(){
-                $('#msj').html('<p class="alert alert-info">Loading ...</p>');
-            },
-            url: '<?= $HOME; ?>core/modules/ajax/cambiar.php',
-            type: 'POST',
-            data: info,
-            async: true,
-            success: function(resp){
-                $('#msj').html('<p class="alert alert-info">Listo</p>');
-                //location.reload();
-            },
-            error: function(jqXRH,estado,error){
-                $('#msj').html(error);
-            },
-            cache: false,
-            contentType: false,
-            processData: false
-        }); 
+        if(precio == 0){
+            $('#msj').html('<p class="alert alert-info">El cambio tiene que ser diferente a 0</p>');
+        }else{
+            if(nuevo >= precio){
+                var uuser = '<?php echo $_SESSION['user_fmo']; ?>';
+                var info = new FormData();
+                    info.append('accion',accion);
+                    info.append('precio',precio);
+                    info.append('usuario',uuser);
+                $.ajax({
+                    beforeSend: function(){
+                        $('#msj').html('<p class="alert alert-info">Loading ...</p>');
+                    },
+                    url: '<?= $HOME; ?>core/modules/ajax/cambiar.php',
+                    type: 'POST',
+                    data: info,
+                    async: true,
+                    success: function(resp){
+                        //$('#msj').html('<p class="alert alert-info">Listo</p>');
+                        location.reload();
+                    },
+                    error: function(jqXRH,estado,error){
+                        $('#msj').html(error);
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                });  
+            }else{
+                $('#msj').html('<p class="alert alert-info">Error en el intercambio.</p>');
+            }
+        }
+        
     }
     function soloNumeros(e){
         var key = e.charCode;
@@ -94,26 +124,8 @@
     }
      $("#gold").keyup(function () {
           var value = $(this).val();
-          if(value > 0 && value != ""){
-            var inme = new FormData();
-                inme.append('accion',"restar");
-                inme.append('valor',value);
-
-            $.ajax({
-                url: '<?= $HOME; ?>core/modules/ajax/consultar.php',
-                async: true,
-                type: 'POST',
-                data: inme,
-                success: function(resp){
-                    $("#slres").html(resp);
-                },
-                error: function(jqXRH,estado,error){
-                    $('#msj').html(error);
-                },
-                cache: false,
-                contentType: false,
-                processData: false
-            }); 
+          if(value > 0 || value != ""){
+            coonsultar("restar",value);
           }else{
             $("#slres").html("");
           }
@@ -123,32 +135,40 @@
         $("#sl").keyup(function () {
           var value = $(this).val();
           if(value > 0 && value != ""){
-            var inme = new FormData();
-                inme.append('accion',"sumar");
-                inme.append('valor',value);
-
-            $.ajax({
-                url: '<?= $HOME; ?>core/modules/ajax/consultar.php',
-                async: true,
-                type: 'POST',
-                data: inme,
-                success: function(resp){
-                    $("#goldres").html(resp);
-                },
-                error: function(jqXRH,estado,error){
-                    $('#msj').html(error);
-                },
-                cache: false,
-                contentType: false,
-                processData: false
-            }); 
+            coonsultar("sumar",value);
           }else{
             $("#goldres").html("");
           }
           
         }).keyup();
 
-am4core.ready(function() {
+function coonsultar(accion2,value2) {
+    var inme = new FormData();
+        inme.append('accion',accion2);
+        inme.append('valor',value2);
+
+    $.ajax({
+        url: '<?= $HOME; ?>core/modules/ajax/consultar.php',
+        async: true,
+        type: 'POST',
+        data: inme,
+        success: function(resp){
+            if(accion2 == "restar"){
+                $("#slres").html(resp);
+            }else{
+                $("#goldres").html(resp);
+            }
+            
+        },
+        error: function(jqXRH,estado,error){
+            $('#msj').html(error);
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+}
+/*am4core.ready(function() {
 
 // Themes begin
 am4core.useTheme(am4themes_animated);
@@ -190,54 +210,6 @@ chart.data = [{
 }, {
   "date": "2012-08-05",
   "value": 17
-}, {
-  "date": "2012-08-06",
-  "value": 16
-}, {
-  "date": "2012-08-07",
-  "value": 18
-}, {
-  "date": "2012-08-08",
-  "value": 21
-}, {
-  "date": "2012-08-09",
-  "value": 26
-}, {
-  "date": "2012-08-10",
-  "value": 24
-}, {
-  "date": "2012-08-11",
-  "value": 29
-}, {
-  "date": "2012-08-12",
-  "value": 32
-}, {
-  "date": "2012-08-13",
-  "value": 18
-}, {
-  "date": "2012-08-14",
-  "value": 24
-}, {
-  "date": "2012-08-15",
-  "value": 22
-}, {
-  "date": "2012-08-16",
-  "value": 18
-}, {
-  "date": "2012-08-17",
-  "value": 19
-}, {
-  "date": "2012-08-18",
-  "value": 14
-}, {
-  "date": "2012-08-19",
-  "value": 15
-}, {
-  "date": "2012-08-20",
-  "value": 12
-}, {
-  "date": "2012-08-21",
-  "value": 8
 }];
 
 // Set input format for the dates
@@ -285,7 +257,7 @@ chart.scrollbarY.parent = chart.leftAxesContainer;
 chart.scrollbarY.toBack();*/
 
 // Create a horizontal scrollbar with previe and place it underneath the date axis
-chart.scrollbarX = new am4charts.XYChartScrollbar();
+/*chart.scrollbarX = new am4charts.XYChartScrollbar();
 chart.scrollbarX.series.push(series);
 chart.scrollbarX.parent = chart.bottomAxesContainer;
 
@@ -293,5 +265,5 @@ dateAxis.start = 0.79;
 dateAxis.keepSelection = true;
 
 
-}); // end am4core.ready()
+}); */// end am4core.ready()
 </script>

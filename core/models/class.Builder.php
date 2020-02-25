@@ -40,8 +40,22 @@ class Builder
         $stmt->fetch();
         $stmt->close();
         $db->close();
-        echo '<h4><img src="libs/images/gold.png"> ',number_format($gold,0,"","."),'</h4>';
-    }      
+        echo '<h4><img src="libs/images/gold.png"> ',number_format($gold,3, ',', '.'),'</h4>';
+    } 
+    public function GetGold2($user)
+    {
+        require_once("core/models/class.Connection.php");
+        $db=new Connection();
+        $stmt=$db->prepare("SELECT gold FROM Equipos WHERE usuario=? LIMIT 1;");
+        $stmt->bind_param("s", $user);
+        $stmt->bind_result($gold);
+        $stmt->execute();
+        $stmt->store_result();
+        $stmt->fetch();
+        $stmt->close();
+        $db->close();
+        echo '<h4><img src="libs/images/gold.png"> ',number_format($gold,3, ',', '.'),'</h4>';
+    }     
     public function GetTeamInfo($user)
     {
         require_once("core/models/class.Connection.php");

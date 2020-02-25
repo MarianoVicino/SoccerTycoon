@@ -7,6 +7,12 @@
             </div>
             <div class="dashboard-item-box push text-center">
                 <hgroup>
+                    <h3 class="nom-nop">My Gold</h3>
+                </hgroup>
+                <?php 
+                    $builder->GetGold2($_SESSION['user_fmo']); 
+                ?>
+                <hgroup>
                     <h3 class="nom-nop">My Coins</h3>
                 </hgroup>
                 <?php 
