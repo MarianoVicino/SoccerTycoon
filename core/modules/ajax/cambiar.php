@@ -11,22 +11,16 @@ $re = mysqli_fetch_array($sql);
 
 //Valor inicial del SL
 $inicial = $re['precio'];
+$final = $inicial;
 
-$resultado = 0;
-
-$resul = ($precio / $inicial);
-$por 	= $resul * 0.01;
-$resultado = $resul + $por;
-if($resultado < 0){
-	$inicial = $inicial;
-}else{
-	if($accion == "sumar"){
-		$inicial = $inicial + $resultado;
+for ($i=0; $i <$precio ; $i++) { 
+	if($_POST['accion'] == "sumar"){
+		$final = $final + 0.002;
 	}else{
-		$inicial = $inicial - $resultado;
-	}	
+		$final = $final - 0.002;
+	}
 }
 
-mysqli_query($db, "UPDATE `Gold` SET `precio`='$inicial'");
+mysqli_query($db, "UPDATE `Gold` SET `precio`='$final'");
 
 ?>

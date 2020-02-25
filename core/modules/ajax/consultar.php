@@ -9,25 +9,30 @@ $importe = $_POST['valor'];
 
 //Valor inicial del SL
 $inicial = $re['precio'];
+$final = $inicial;
 
-$resultado = 0;
- 
-$resul = ($importe / $inicial);
-$por 	= $resul * 0.01;
-$resultado = $resul + $por;
-if($resultado < 0){
-	$inicial = $inicial;
-}else{
+for ($i=0; $i <$importe ; $i++) { 
 	if($_POST['accion'] == "sumar"){
-		$inicial = $inicial + $resultado;
+		$final = $final + 0.002;
 	}else{
-		$inicial = $inicial - $resultado;
+		$final = $final - 0.002;
 	}
 }
-if($inicial < 0){
-	$inicial = 1; 
-}
-	
 
-echo number_format($inicial, 2, ',', '.');
+/*if($_POST['accion'] == "sumar"){
+	$resul = $inicial * $importe;
+	$alta = $resul * 0.01;
+	$final = $resul + $alta;
+	
+}else{
+	$resul = $inicial / $importe;
+	$alta = $resul * 0.01;
+	$final = $resul - $alta;
+}
+
+if($final < 0){
+	$final = 2;
+}*/
+
+echo number_format($final, 3, ',', '.');
 ?>
