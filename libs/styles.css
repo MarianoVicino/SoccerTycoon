@@ -30,6 +30,15 @@ body {
 .modal-content {
     background-color: rgba(0, 0, 0, 0.5);
 }
+@keyframes latidos {
+    from { transform: none; }
+    50% { transform: scale(1.2); }
+    to { transform: none; }
+}
+.slogan {
+    animation: latidos .8s;
+	animation-iteration-count: 4;
+}
 
 .slogan img {
     width: 30%;
