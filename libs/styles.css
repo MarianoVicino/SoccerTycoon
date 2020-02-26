@@ -18,7 +18,9 @@ body {
     background-color: #333 !important;
     BORDER: none;
 }
-
+.btn{
+    background: rgba(0,0,0,.4)
+}
 .menu-box,
 .nav-bg-2 {
     background-color: #333 !important;
@@ -196,8 +198,8 @@ body {
 }
 
 .dropdown-menu {
-    background: rgba(0, 0, 0, 0.5);
-    top: 110%;
+    background: rgba(0, 0, 0, 0);
+
 }
 
 .dropdown-menu>li>a:hover {

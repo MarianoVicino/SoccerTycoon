@@ -1,335 +1,49 @@
-<style>/* Fonts Form Google Font ::- https://fonts.google.com/  -:: */
-    @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
-    /* End Fonts */
-    /* Start Global rules */
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    /* End Global rules */
-    
-    /* Start body rules */
-    body {
-        background-color: #333;
-    opacity: .4;
-    background-attachment: fixed;
-      background-repeat: no-repeat;
-
-    opacity: .95;
-    /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
-    }
-    
-    
-    
-    /* |||||||||||||||||||||||||||||||||||||||||||||*/
-    /* //////////////////////////////////////////// */
-    
-    
-    
-    
-    /* End body rules */
-    
-    /* Start form  attributes */
-    form {
-        width: 450px;
-        min-height: 500px;
-        height: auto;
-        border-radius: 5px;
-        margin: 2% auto;
-        box-shadow: 0px 0px 0px 0px;
-        padding: 2%;
-        background-image: linear-gradient(-200deg, #b4441f 25%, #d6a887 25%, #06060b 25%,#7c8484 25%);
-    }
-    /* form Container */
-    form .con {
-        display: -webkit-flex;
-        display: flex;
-      
-        -webkit-justify-content: space-around;
-        justify-content: space-around;
-      
-        -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
-      
-          margin: 0 auto;
-    }
-    .btn-g {
-	box-shadow:inset 0px 1px 0px 0px #cf866c;
-	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
-	background-color:#d0451b;
-	border-radius:3px;
-	border:1px solid #942911;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #854629;
-}
-.btn-g:hover {
-	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
-	background-color:#bc3315;
-}
-.btn-g:active {
-	position:relative;
-	top:1px;
-}
-.btn-fb {
-	box-shadow:inset 0px 1px 0px 0px #9fb4f2;
-	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-	background-color:#7892c2;
-	border-radius:3px;
-	border:1px solid #4e6096;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #283966;
-}
-.btn-fb:hover {
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-	background-color:#476e9e;
-}
-.btn-fb:active {
-	position:relative;
-	top:1px;
-}
-
-
-    
-    /* the header form form */
-    header {
-        margin: 2% auto 10% auto;
-        text-align: center;
-    }
-    /* Login title form form */
-    header h2 {
-        font-size: 250%;
-        font-family: 'Playfair Display', serif;
-        color: #3e403f;
-    }
-    /*  A welcome message or an explanation of the login form */
-    header p {letter-spacing: 0.05em;}
-    
-    
-    
-    /* //////////////////////////////////////////// */
-    /* //////////////////////////////////////////// */
-    
-    
-    .input-item {
-        background: #fff;
-        color: #333;
-        padding: 14.5px 0px 15px 9px;
-        border-radius: 5px 0px 0px 5px;
-    }
-    
-    
-    
-    /* Show/hide password Font Icon */
-    #eye {
-        background: #fff;
-        color: #333;
-      
-        margin: 5.9px 0 0 0;
-        margin-left: -20px;
-        padding: 15px 9px 19px 0px;
-        border-radius: 0px 5px 5px 0px;
-      
-        float: right;
-        position: relative;
-        right: 1%;
-        top: -.2%;
-        z-index: 5;
-        
-        cursor: pointer;
-    }
-    /* inputs form  */
-    input[class="form-input"]{
-        width: 240px;
-        height: 50px;
-      
-        margin-top: 2%;
-        padding: 15px;
-        
-        font-size: 16px;
-        font-family: 'Abel', sans-serif;
-        color: #5E6472;
-      
-        outline: none;
-        border: none;
-      
-        border-radius: 0px 5px 5px 0px;
-        transition: 0.2s linear;
-        
-    }
-    input[id="txt-input"] {width: 250px;}
-    /* focus  */
-    input:focus {
-        transform: translateX(-2px);
-        border-radius: 5px;
-    }
-    
-    /* //////////////////////////////////////////// */
-    /* //////////////////////////////////////////// */
-    
-    /* input[type="text"] {min-width: 250px;} */
-    /* buttons  */
-    button {
-        display: inline-block;
-        color: #252537;
-      
-        width: 280px;
-        height: 50px;
-      
-        padding: 0 20px;
-        background: #fff;
-        border-radius: 5px;
-        
-        outline: none;
-        border: none;
-      
-        cursor: pointer;
-        text-align: center;
-        transition: all 0.2s linear;
-        
-        margin: 7% auto;
-        letter-spacing: 0.05em;
-    }
-    /* Submits */
-    .submits {
-        width: 48%;
-        display: inline-block;
-        float: left;
-        margin-left: 2%;
-    }
-    
-    /*       Forgot Password button FAF3DD  */
-    .frgt-pass {background: transparent;}
-    
-    /*     Sign Up button  */
-    .sign-up {background: #B8F2E6;}
-    
-    
-    /* buttons hover */
-    button:hover {
-        transform: translatey(3px);
-        box-shadow: none;
-    }
-    
-    /* buttons hover Animation */
-    button:hover {
-        animation: ani9 0.4s ease-in-out infinite alternate;
-    }
-    @keyframes ani9 {
-        0% {
-            transform: translateY(3px);
-        }
-        100% {
-            transform: translateY(5px);
-        }
-    }
-    </style>
-<div class="overlay">
-    <!-- LOGN IN FORM by Omar Dsoky -->
-    <form>
-       <!--   con = Container  for items in the form-->
-       <div class="con">
-       <!--     Start  header Content  -->
-       <header class="head-form">
-          <h2>Log In</h2>
-          <p>WITH FACEBOOK OR GOOGLE</p>
-          <div class="row">
-            <div class="col-md-12">
-                <div class="social-buttons">
-                    <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> FACEBOOK</a>
-                    <a href="#" class="btn btn-g"><i class="fa fa-GOOGLE"></i> GOOGLE</a> <BR>
-                        <P CLASS="HEAD-FORM">OR</P>
+<body dir="ltr" class="plugin _4mr9 gecko x1 Locale_es_ES">
+    <div class="_li">
+        <div class="pluginSkinLight pluginFontHelvetica">
+            <div class="pluginLoginButton pluginLoginButtonmedium" id="u_0_0" style="width: 300px;">
+                <div>
+                    <div class="_4z_b _4z_8 _4z_d" role="button" tabindex="0" id="u_0_1">
+                        <table class="uiGrid _51mz" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr class="_51mx">
+                                    <td class="_51m-">
+                                        <div class="_4z_g"><span class="_4z_e"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 216 216" class="_55a2">
+                                                    <path fill="white" d="
+    M204.1 0H11.9C5.3 0 0 5.3 0 11.9v192.2c0 6.6 5.3 11.9 11.9
+    11.9h103.5v-83.6H87.2V99.8h28.1v-24c0-27.9 17-43.1 41.9-43.1
+    11.9 0 22.2.9 25.2 1.3v29.2h-17.3c-13.5 0-16.2 6.4-16.2
+    15.9v20.8h32.3l-4.2 32.6h-28V216h55c6.6 0 11.9-5.3
+    11.9-11.9V11.9C216 5.3 210.7 0 204.1 0z"></path>
+                                                </svg><img class="_55at img"
+                                                    src="https://www.facebook.com/rsrc.php/v3/y8/r/qYG_pvNhLC1.png"
+                                                    alt="" width="16" height="16"></span><img class="_4z_5 img"
+                                                src="https://www.facebook.com/rsrc.php/v3/yx/r/iqVGY7gYXlg.gif" alt=""
+                                                width="20" height="19"></div>
+                                    </td>
+                                    <td class="_51m- _51mw"><span class="_4z_9"><span
+                                                class="_4z_f fwb">Entrar</span></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            
-       </header>
-       <!--     End  header Content  -->
-       <br/>
-       
-       <div class="field-set">
-         
-          <!--   user name -->
-             <span class="input-item">
-               <i class="fa fa-user-circle"></i>
-             </span>
-            <!--   user name Input-->
-             <input class="form-input" id="txt-input" type="text" placeholder="USER" required>
-         
-          <br>
-         
-               <!--   Password -->
-         
-          <span class="input-item">
-            <i class="fa fa-key"></i>
-           </span>
-          <!--   Password Input-->
-          <input class="form-input" type="password" placeholder="PASSWORD" id="pwd"  name="password" required>
-         
-    <!--      Show/hide password  -->
-         <span>
-            <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
-         </span>
-         
-         
-          <br>
-    <!--        buttons -->
-    <!--      button LogIn -->
-          <button class="log-in"> Log In </button>
-       </div>
-      
-    <!--   other buttons -->
-       <div class="other">
-    <!--      Forgot Password button-->
-          <button class="btn submits frgt-pass">Forgot Password</button>
-    <!--     Sign Up button -->
-          <button class="btn submits sign-up">Sign Up 
-    <!--         Sign Up font icon -->
-          <i class="fa fa-user-plus" aria-hidden="true"></i>
-          </button>
-    <!--      End Other the Division -->
-       </div>
-         
-    <!--   End Conrainer  -->
-      </div>
-      
-      <!-- End Form -->
-    </form>
+                <script>(function (width, height, id, callback, origin, domain) { if (id) { var e = document.getElementById(id); if (width !== -1) e.style.width = width + "px"; else { width = e.offsetWidth; if (window.getComputedStyle) { var computed = getComputedStyle(e); computed && (width = Math.ceil(parseFloat(computed.width)) || e.offsetWidth) } } height === -1 && (height = e.offsetHeight) } var message = "type=resize&cb=" + callback + "&width=" + width + "&height=" + height;; (function () { var a = window.parent; window.opener != null && typeof window.opener.postMessage === "function" && (relation === "opener.parent" ? a = window.opener.parent : a = window.opener); var b = !0; function c(a, b) { a = window.location.hostname.match(/\.(facebook\.sg|facebookcorewwwi\.onion)$/); a = a ? a[1] : "facebook.com"; new Image().src = "https://www." + a + "/common/scribe_endpoint.php?c=jssdk_error&m=" + encodeURIComponent(JSON.stringify(b)) } function d() { if (a === window) window.close(), window.open("", "_self", ""), window.close(), !window.closed && closeURI && window.location.replace(closeURI); else try { a.postMessage(message, origin) } catch (a) { b ? (b = !1, window.setTimeout(d, 200)) : c("jssdk_error", { error: "POST_MESSAGE", extra: { message: a.message + ", html/js/connect/XDDialogResponsePurePostMessage.js:53" } }) } } function e() { __fbNative.postMessage(message, origin) } window == top && /FBAN\/\w+;/i.test(navigator.userAgent) && !/FBAN\/mLite;/.test(navigator.userAgent) ? window.__fbNative && __fbNative.postMessage ? e() : window.addEventListener("fbNativeReady", e) : d() })();; })(300, -1, "u_0_0", "feda7a4c788bea", "https:\/\/www.soccertycoon.com", "www.soccertycoon.com");</script>
+            </div>
+        </div>
     </div>
-    <script>// Show/hide password onClick of button using Javascript only
+    <script>function envFlush(a) { function b(b) { for (var c in a) b[c] = a[c] } window.requireLazy ? window.requireLazy(["Env"], b) : (window.Env = window.Env || {}, b(window.Env)) } envFlush({ "ajaxpipe_token": "AXjZ6PQZbPFxOcsc", "no_cookies": 1 });</script>
+    <script>ServerJSQueue.add(function () { requireLazy(["Bootloader"], function (Bootloader) { Bootloader.enableBootload({ "BanzaiODS": { "r": [], "rds": { "m": ["BanzaiODS", "BanzaiScuba"], "r": [] }, "be": 1 } }); }); });</script>
+    <script>ServerJSQueue.add({ "elements": [["__elem_bcf3b94b_0_0", "u_0_1", 2]], "require": [["UnverifiedXD", "setChannelUrl", [], ["https:\/\/staticxx.facebook.com\/connect\/xd_arbiter.php?version=45#cb=feda7a4c788bea&domain=www.soccertycoon.com&origin=https\u00253A\u00252F\u00252Fwww.soccertycoon.com\u00252Ff26ca28e03552aa&relation=parent.parent"]], ["PluginXDReady"], ["PluginLoginButton", "oauth_new", ["__elem_bcf3b94b_0_0"], [{ "__m": "__elem_bcf3b94b_0_0" }, 125231578816554, "", "https:\/\/www.soccertycoon.com\/f26ca28e03552aa", null, "LoginButton", "", null, "es_ES", null, "3eba897a-2e38-4fb1-9cef-1b53c45c390b", false]], ["PluginResize", "auto", ["__elem_bcf3b94b_0_0"], [{ "__m": "__elem_bcf3b94b_0_0" }, "resize"]], ["PluginReturn", "syncPlugins", [], []], ["WebPixelRatioDetector", "startDetecting", [], [false]], ["PluginBundleInit", "init", [], []], ["AsyncSignal"], ["NavigationMetrics", "setPage", [], [{ "page": "\/plugins\/login_button.php", "page_type": "widget", "page_uri": "https:\/\/www.facebook.com\/plugins\/login_button.php?app_id=125231578816554&channel=https\u00253A\u00252F\u00252Fstaticxx.facebook.com\u00252Fconnect\u00252Fxd_arbiter.php\u00253Fversion\u00253D45\u002523cb\u00253Dfeda7a4c788bea\u002526domain\u00253Dwww.soccertycoon.com\u002526origin\u00253Dhttps\u0025253A\u0025252F\u0025252Fwww.soccertycoon.com\u0025252Ff26ca28e03552aa\u002526relation\u00253Dparent.parent&container_width=0&locale=es_ES&perms=email\u00252Cuser_birthday&sdk=joey", "serverLID": "6797581368259607028" }]], ["BanzaiODS"], ["BanzaiScuba"], ["Bootloader", "markComponentsAsImmediate", [], [["BanzaiODS", "BanzaiScuba"]]]], "define": [["DataStoreConfig", [], { "expandoKey": "__FB_STORE", "useExpando": true }, 2915], ["UserAgentData", [], { "browserArchitecture": "64", "browserFullVersion": "73.0", "browserMinorVersion": 0, "browserName": "Firefox", "browserVersion": 73, "deviceName": "Unknown", "engineName": "Gecko", "engineVersion": "73.0", "platformArchitecture": "64", "platformName": "Linux", "platformVersion": null, "platformFullVersion": null }, 527], ["BootloaderConfig", [], { "jsRetries": null, "jsRetryAbortNum": 2, "jsRetryAbortTime": 5, "payloadEndpointURI": "https:\/\/www.facebook.com\/ajax\/bootloader-endpoint\/", "preloadBE": false, "assumeNotNonblocking": false, "trackUnpredictedBEResources": true, "shouldCoalesceModuleRequestsMadeInSameTick": true, "staggerJsDownloads": false, "preloader_num_preloads": 0, "preloader_preload_after_dd": false, "preloader_num_loads": 1, "preloader_enabled": false, "retryQueuedBootloads": false, "silentDups": false, "asyncPreloadBoost": true }, 329], ["CSSLoaderConfig", [], { "timeout": 5000, "modulePrefix": "BLCSS:", "loadEventSupported": true }, 619], ["CurrentEnvironment", [], { "facebookdotcom": true, "messengerdotcom": false }, 827], ["UriNeedRawQuerySVConfig", [], { "uris": ["dms.netmng.com", "doubleclick.net", "r.msn.com", "watchit.sky.com", "graphite.instagram.com", "www.kfc.co.th", "learn.pantheon.io", "www.landmarkshops.in", "www.ncl.com", "s0.wp.com", "www.tatacliq.com", "bs.serving-sys.com", "kohls.com", "lazada.co.th", "xg4ken.com", "technopark.ru", "officedepot.com.mx", "bestbuy.com.mx", "booking.com"] }, 3871], ["KSConfig", [], { "killed": { "__set": ["POCKET_MONSTERS_CREATE", "POCKET_MONSTERS_DELETE", "VIDEO_DIMENSIONS_FROM_PLAYER_IN_UPLOAD_DIALOG", "POCKET_MONSTERS_UPDATE_NAME", "ADS_PLACEMENT_FIX_PUBLISHER_PLATFORMS_MUTATION", "MOBILITY_KILL_OLD_VISIBILITY_POSITION_SETTING", "WORKPLACE_DISPLAY_TEXT_EVIDENCE_REPORTING", "DYNAMIC_ADS_SET_CATALOG_AND_PRODUCT_SET_TOGETHER", "BUSINESS_GRAPH_SETTING_APP_ASSIGNED_USERS_NEW_API", "BUSINESS_GRAPH_SETTING_WABA_ASSIGNED_USERS_NEW_API", "BUSINESS_GRAPH_SETTING_ESG_ASSIGNED_USERS_NEW_API", "BUSINESS_GRAPH_SETTING_PRODUCT_CATALOG_ASSIGNED_USERS_NEW_API", "BUSINESS_MANAGER_SHOW_UI_HIDDEN_TASK_FOR_ASSET", "BUSINESS_GRAPH_SETTING_BU_ASSIGNED_USERS_NEW_API", "BUSINESS_GRAPH_SETTING_SESG_ASSIGNED_USERS_NEW_API", "RECRUITING_REQUISITION_VALIDATE_COMPANY_GROUPING_ON_LINK"] }, "ko": { "__set": ["acrJTh9WGdp", "1oOE64fL4wO", "2dhqRnqXGLQ", "7r6mSP7ofr2", "1ntjZ2zgf03", "3oh5Mw86USj", "8NAceEy9JZo", "5mNEXob0nTj", "4j36SVzvP3w", "8PlKuowafe8", "53gCxKq281G", "3yzzwBY7Npj", "4NbCsulUUI3", "4NSq3ZC4ScE", "1onzIv0jH6H", "5LSlJUj3BnT"] } }, 2580], ["ImmediateImplementationExperiments", [], { "prefer_message_channel": true }, 3419], ["PromiseUsePolyfillSetImmediateGK", [], { "www_always_use_polyfill_setimmediate": false }, 2190], ["TrustedTypesConfig", [], { "useTrustedTypes": false, "reportOnly": true }, 4548], ["CurrentCommunityInitialData", [], {}, 490], ["CurrentUserInitialData", [], { "USER_ID": "0", "ACCOUNT_ID": "0", "NAME": "", "SHORT_NAME": null, "IS_MESSENGER_ONLY_USER": false, "IS_DEACTIVATED_ALLOWED_ON_MESSENGER": false, "APP_ID": "256281040558" }, 270], ["DTSGInitialData", [], {}, 258], ["SprinkleConfig", [], { "param_name": "jazoest", "version": 2, "should_randomize": false }, 2111], ["DTSGInitData", [], { "token": "", "async_get_token": "" }, 3515], ["ISB", [], {}, 330], ["LSD", [], {}, 323], ["SiteData", [], { "server_revision": 1001755117, "client_revision": 1001755117, "tier": "", "push_phase": "C3", "pkg_cohort": "PHASED:plugin_default_pkg", "pr": 1, "haste_site": "www", "be_one_ahead": false, "ir_on": true, "is_rtl": false, "is_comet": false, "hsi": "6797581368259607028", "spin": 0, "__spin_r": 1001755117, "__spin_b": "trunk", "__spin_t": 1582685245, "vip": "157.240.222.35" }, 317], ["ServerNonce", [], { "ServerNonce": "-OE3MwPiva96OYzu6ssADv" }, 141], ["InitialCookieConsent", [], { "deferCookies": false, "noCookies": true, "shouldShowCookieBanner": false }, 4328], ["UrlMapConfig", [], { "www": "www.facebook.com", "m": "m.facebook.com", "business": "business.facebook.com", "api": "api.facebook.com", "api_read": "api-read.facebook.com", "graph": "graph.facebook.com", "an": "an.facebook.com", "fbcdn": "static.xx.fbcdn.net", "cdn": "staticxx.facebook.com", "graph_facebook": "graph.facebook.com", "graph_gaming": "graph.fb.gg" }, 73], ["JSSDKRuntimeConfig", [], { "locale": "es_ES", "revision": "1001755117", "rtl": false, "sdkab": null, "sdkns": "", "sdkurl": "https:\/\/www.facebook.com\/plugins\/login_button.php" }, 384], ["PlatformVersions", [], { "LATEST": "v6.0", "versions": { "UNVERSIONED": "unversioned", "V1_0": "v1.0", "V2_0": "v2.0", "V2_1": "v2.1", "V2_2": "v2.2", "V2_3": "v2.3", "V2_4": "v2.4", "V2_5": "v2.5", "V2_6": "v2.6", "V2_7": "v2.7", "V2_8": "v2.8", "V2_9": "v2.9", "V2_10": "v2.10", "V2_11": "v2.11", "V2_12": "v2.12", "V3_0": "v3.0", "V3_1": "v3.1", "V3_2": "v3.2", "V3_3": "v3.3", "V4_0": "v4.0", "V5_0": "v5.0", "V6_0": "v6.0" } }, 1254], ["CookieCoreConfig", [], { "a11y": { "s": "None" }, "act": { "s": "Lax" }, "c_user": { "s": "None" }, "dpr": { "t": 604800, "s": "None" }, "js_ver": { "t": 604800, "s": "None" }, "locale": { "t": 604800, "s": "None" }, "m_pixel_ratio": { "t": 604800, "s": "None" }, "noscript": { "s": "None" }, "pnl_data2": { "t": 2, "s": "None" }, "presence": { "s": "None" }, "sfau": { "s": "None" }, "wd": { "t": 604800, "s": "None" }, "x-referer": { "s": "None" }, "x-src": { "t": 1, "s": "None" } }, 2104], ["CookieCoreLoggingConfig", [], { "maximumIgnorableStallMs": 16.67, "sampleRate": 9.7e-5, "sampleRateClassic": 1.0e-10, "sampleRateFastStale": 1.0e-8 }, 3401], ["TrackingConfig", [], { "domain": "https:\/\/pixel.facebook.com" }, 325], ["ZeroRewriteRules", [], { "rewrite_rules": {}, "whitelist": { "\/hr\/r": 1, "\/hr\/p": 1, "\/zero\/unsupported_browser\/": 1, "\/zero\/policy\/optin": 1, "\/zero\/optin\/write\/": 1, "\/zero\/optin\/legal\/": 1, "\/zero\/optin\/free\/": 1, "\/about\/privacy\/": 1, "\/about\/privacy\/update\/": 1, "\/about\/privacy\/update": 1, "\/zero\/toggle\/welcome\/": 1, "\/zero\/toggle\/nux\/": 1, "\/fup\/interstitial\/": 1, "\/work\/landing": 1, "\/work\/login\/": 1, "\/work\/email\/": 1, "\/ai.php": 1, "\/js_dialog_resources\/dialog_descriptions_android.json": 0, "\/connect\/jsdialog\/MPlatformAppInvitesJSDialog\/": 0, "\/connect\/jsdialog\/MPlatformOAuthShimJSDialog\/": 0, "\/connect\/jsdialog\/MPlatformLikeJSDialog\/": 0, "\/qp\/interstitial\/": 1, "\/qp\/action\/redirect\/": 1, "\/qp\/action\/close\/": 1, "\/zero\/support\/ineligible\/": 1, "\/zero_balance_redirect\/": 1, "\/zero_balance_redirect": 1, "\/zero_balance_redirect\/l\/": 1, "\/l.php": 1, "\/lsr.php": 1, "\/ajax\/dtsg\/": 1, "\/checkpoint\/block\/": 1, "\/exitdsite": 1, "\/zero\/balance\/pixel\/": 1, "\/zero\/balance\/": 1, "\/zero\/balance\/carrier_landing\/": 1, "\/zero\/flex\/logging\/": 1, "\/tr": 1, "\/tr\/": 1, "\/sem_campaigns\/sem_pixel_test\/": 1, "\/bookmarks\/flyout\/body\/": 1, "\/zero\/subno\/": 1, "\/confirmemail.php": 1, "\/policies\/": 1, "\/mobile\/internetdotorg\/classifier\/": 1, "\/zero\/dogfooding": 1, "\/xti.php": 1, "\/zero\/fblite\/config\/": 1, "\/hr\/zsh\/wc\/": 1, "\/4oh4.php": 1, "\/autologin.php": 1, "\/birthday_help.php": 1, "\/checkpoint\/": 1, "\/contact-importer\/": 1, "\/cr.php": 1, "\/legal\/terms\/": 1, "\/login.php": 1, "\/login\/": 1, "\/mobile\/account\/": 1, "\/n\/": 1, "\/remote_test_device\/": 1, "\/upsell\/buy\/": 1, "\/upsell\/buyconfirm\/": 1, "\/upsell\/buyresult\/": 1, "\/upsell\/promos\/": 1, "\/upsell\/continue\/": 1, "\/upsell\/h\/promos\/": 1, "\/upsell\/loan\/learnmore\/": 1, "\/upsell\/purchase\/": 1, "\/upsell\/promos\/upgrade\/": 1, "\/upsell\/buy_redirect\/": 1, "\/upsell\/loan\/buyconfirm\/": 1, "\/upsell\/loan\/buy\/": 1, "\/upsell\/sms\/": 1, "\/wap\/a\/channel\/reconnect.php": 1, "\/wap\/a\/nux\/wizard\/nav.php": 1, "\/wap\/appreg.php": 1, "\/wap\/birthday_help.php": 1, "\/wap\/c.php": 1, "\/wap\/confirmemail.php": 1, "\/wap\/cr.php": 1, "\/wap\/login.php": 1, "\/wap\/r.php": 1, "\/zero\/datapolicy": 1, "\/a\/timezone.php": 1, "\/a\/bz": 1, "\/bz\/reliability": 1, "\/r.php": 1, "\/mr\/": 1, "\/reg\/": 1, "\/registration\/log\/": 1, "\/terms\/": 1, "\/f123\/": 1, "\/expert\/": 1, "\/experts\/": 1, "\/terms\/index.php": 1, "\/terms.php": 1, "\/srr\/": 1, "\/msite\/redirect\/": 1, "\/fbs\/pixel\/": 1, "\/contactpoint\/preconfirmation\/": 1, "\/contactpoint\/cliff\/": 1, "\/contactpoint\/confirm\/submit\/": 1, "\/contactpoint\/confirmed\/": 1, "\/contactpoint\/login\/": 1, "\/preconfirmation\/contactpoint_change\/": 1, "\/help\/contact\/": 1, "\/survey\/": 1, "\/upsell\/loyaltytopup\/accept\/": 1, "\/settings\/": 1, "\/lite\/": 1 } }, 1478], ["cr:708886", ["EventProfilerImpl"], { "__rc": ["EventProfilerImpl", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["cr:717822", ["TimeSliceImpl"], { "__rc": ["TimeSliceImpl", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["cr:806696", ["clearTimeoutBlue"], { "__rc": ["clearTimeoutBlue", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["cr:807042", ["setTimeoutBlue"], { "__rc": ["setTimeoutBlue", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["cr:1003267", ["clearIntervalBlue"], { "__rc": ["clearIntervalBlue", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["cr:896462", ["setIntervalAcrossTransitionsBlue"], { "__rc": ["setIntervalAcrossTransitionsBlue", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["cr:986633", ["setTimeoutAcrossTransitionsBlue"], { "__rc": ["setTimeoutAcrossTransitionsBlue", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["cr:696703", [], { "__rc": [null, "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["cr:1268308", ["BanzaiNew"], { "__rc": ["BanzaiNew", "Aa04Haeax0pn99SI7d6K9volZL40OUB6x3vFNp8TIg74k-d_qC9a4asXvbZmPqZ4e8dR8c7e09CrgOo6lPVyG46f_KzE2SOH"] }, -1], ["cr:925100", ["RunBlue"], { "__rc": ["RunBlue", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1], ["TimeSliceInteractionSV", [], { "on_demand_reference_counting": true, "on_demand_profiling_counters": true, "default_rate": 1000, "lite_default_rate": 100, "interaction_to_lite_coinflip": { "ADS_INTERFACES_INTERACTION": 0, "ads_perf_scenario": 0, "ads_wait_time": 0, "Event": 1, "video_psr": 0, "video_stall": 0 }, "interaction_to_coinflip": { "ADS_INTERFACES_INTERACTION": 1, "ads_perf_scenario": 1, "ads_wait_time": 1, "video_psr": 1000000, "video_stall": 2500000, "Event": 100, "cms_editor": 1, "pixelcloud_view_performance": 25, "intern_notify_inbox_page_load": 10, "intern_notify_jewel_list_load": 10, "tasks_initial_page_load": 1, "watch_carousel_left_scroll": 1, "watch_carousel_right_scroll": 1, "watch_sections_load_more": 1, "watch_discover_scroll": 1, "fbpkg_ui": 1, "sevmanager_powersearch_initial_page_load": 10, "network_ui": 1, "daiquery_interactive_query": 1 }, "enable_heartbeat": true, "maxBlockMergeDuration": 0, "maxBlockMergeDistance": 0, "enable_banzai_stream": true, "user_timing_coinflip": 50, "banzai_stream_coinflip": 1, "compression_enabled": true, "ref_counting_fix": false, "ref_counting_cont_fix": false, "also_record_new_timeslice_format": false, "force_async_request_tracing_on": false }, 2609], ["EventConfig", [], { "sampling": { "bandwidth": 0, "play": 0, "playing": 0, "progress": 0, "pause": 0, "ended": 0, "seeked": 0, "seeking": 0, "waiting": 0, "loadedmetadata": 0, "canplay": 0, "selectionchange": 0, "change": 0, "timeupdate": 2000000, "adaptation": 0, "focus": 0, "blur": 0, "load": 0, "error": 0, "message": 0, "abort": 0, "storage": 0, "scroll": 200000, "mousemove": 20000, "mouseover": 10000, "mouseout": 10000, "mousewheel": 1, "MSPointerMove": 10000, "keydown": 0.1, "click": 0.02, "mouseup": 0.02, "__100ms": 0.001, "__default": 5000, "__min": 100, "__interactionDefault": 200, "__eventDefault": 100000 }, "page_sampling_boost": 1, "interaction_regexes": { "BlueBarAccountChevronMenu": " _5lxs(?: .*)?$", "BlueBarHomeButton": " _bluebarLinkHome__interaction-root(?: .*)?$", "BlueBarProfileLink": " _1k67(?: .*)?$", "ReactComposerSproutMedia": " _1pnt(?: .*)?$", "ReactComposerSproutAlbum": " _1pnu(?: .*)?$", "ReactComposerSproutNote": " _3-9x(?: .*)?$", "ReactComposerSproutLocation": " _1pnv(?: .*)?$", "ReactComposerSproutActivity": " _1pnz(?: .*)?$", "ReactComposerSproutPeople": " _1pn-(?: .*)?$", "ReactComposerSproutLiveVideo": " _5tv7(?: .*)?$", "ReactComposerSproutMarkdown": " _311p(?: .*)?$", "ReactComposerSproutFormattedText": " _mwg(?: .*)?$", "ReactComposerSproutSticker": " _2vri(?: .*)?$", "ReactComposerSproutSponsor": " _5t5q(?: .*)?$", "ReactComposerSproutEllipsis": " _1gr3(?: .*)?$", "ReactComposerSproutContactYourRepresentative": " _3cnv(?: .*)?$", "ReactComposerSproutFunFact": " _2_xs(?: .*)?$", "TextExposeSeeMoreLink": " see_more_link(?: .*)?$", "SnowliftBigCloseButton": "(?: _xlt(?: .*)? _418x(?: .*)?$| _418x(?: .*)? _xlt(?: .*)?$)", "SnowliftPrevPager": "(?: snowliftPager(?: .*)? prev(?: .*)?$| prev(?: .*)? snowliftPager(?: .*)?$)", "SnowliftNextPager": "(?: snowliftPager(?: .*)? next(?: .*)?$| next(?: .*)? snowliftPager(?: .*)?$)", "SnowliftFullScreenButton": "#fbPhotoSnowliftFullScreenSwitch( .+)*", "PrivacySelectorMenu": "(?: _57di(?: .*)? _2wli(?: .*)?$| _2wli(?: .*)? _57di(?: .*)?$)", "ReactComposerFeedXSprouts": " _nh6(?: .*)?$", "SproutsComposerStatusTab": " _sg1(?: .*)?$", "SproutsComposerLiveVideoTab": " _sg1(?: .*)?$", "SproutsComposerAlbumTab": " _sg1(?: .*)?$", "composerAudienceSelector": " _ej0(?: .*)?$", "FeedHScrollAttachmentsPrevPager": " _1qqy(?: .*)?$", "FeedHScrollAttachmentsNextPager": " _1qqz(?: .*)?$", "DockChatTabFlyout": " fbDockChatTabFlyout(?: .*)?$", "PrivacyLiteJewel": " _59fc(?: .*)?$", "ActorSelector": " _6vh(?: .*)?$", "LegacyMentionsInput": "(?: ReactLegacyMentionsInput(?: .*)? uiMentionsInput(?: .*)? _2xwx(?: .*)?$| uiMentionsInput(?: .*)? ReactLegacyMentionsInput(?: .*)? _2xwx(?: .*)?$| _2xwx(?: .*)? ReactLegacyMentionsInput(?: .*)? uiMentionsInput(?: .*)?$| ReactLegacyMentionsInput(?: .*)? _2xwx(?: .*)? uiMentionsInput(?: .*)?$| uiMentionsInput(?: .*)? _2xwx(?: .*)? ReactLegacyMentionsInput(?: .*)?$| _2xwx(?: .*)? uiMentionsInput(?: .*)? ReactLegacyMentionsInput(?: .*)?$)", "UFIActionLinksEmbedLink": " _2g1w(?: .*)?$", "UFIPhotoAttachLink": " UFIPhotoAttachLinkWrapper(?: .*)?$", "UFIMentionsInputProxy": " _1osa(?: .*)?$", "UFIMentionsInputDummy": " _1osc(?: .*)?$", "UFIOrderingModeSelector": " _3scp(?: .*)?$", "UFIPager": "(?: UFIPagerRow(?: .*)? UFIRow(?: .*)?$| UFIRow(?: .*)? UFIPagerRow(?: .*)?$)", "UFIReplyRow": "(?: UFIReplyRow(?: .*)? UFICommentReply(?: .*)?$| UFICommentReply(?: .*)? UFIReplyRow(?: .*)?$)", "UFIReplySocialSentence": " UFIReplySocialSentenceRow(?: .*)?$", "UFIShareLink": " _5f9b(?: .*)?$", "UFIStickerButton": " UFICommentStickerButton(?: .*)?$", "MentionsInput": " _5yk1(?: .*)?$", "FantaChatTabRoot": " _3_9e(?: .*)?$", "SnowliftViewableRoot": " _2-sx(?: .*)?$", "ReactBlueBarJewelButton": " _5fwr(?: .*)?$", "UFIReactionsDialogLayerImpl": " _1oxk(?: .*)?$", "UFIReactionsLikeLinkImpl": " _4x9_(?: .*)?$", "UFIReactionsLinkImplRoot": " _khz(?: .*)?$", "Reaction": " _iuw(?: .*)?$", "UFIReactionsMenuImpl": " _iu-(?: .*)?$", "UFIReactionsSpatialReactionIconContainer": " _1fq9(?: .*)?$", "VideoComponentPlayButton": " _bsl(?: .*)?$", "FeedOptionsPopover": " _b1e(?: .*)?$", "UFICommentLikeCount": " UFICommentLikeButton(?: .*)?$", "UFICommentLink": " _5yxe(?: .*)?$", "ChatTabComposerInputContainer": " _552h(?: .*)?$", "ChatTabHeader": " _15p4(?: .*)?$", "DraftEditor": " _5rp7(?: .*)?$", "ChatSideBarDropDown": " _5vm9(?: .*)?$", "SearchBox": " _539-(?: .*)?$", "ChatSideBarLink": " _55ln(?: .*)?$", "MessengerSearchTypeahead": " _3rh8(?: .*)?$", "NotificationListItem": " _33c(?: .*)?$", "MessageJewelListItem": " messagesContent(?: .*)?$", "Messages_Jewel_Button": " _3eo8(?: .*)?$", "Notifications_Jewel_Button": " _3eo9(?: .*)?$", "snowliftopen": " _342u(?: .*)?$", "NoteTextSeeMoreLink": " _3qd_(?: .*)?$", "fbFeedOptionsPopover": " _1he6(?: .*)?$", "Requests_Jewel_Button": " _3eoa(?: .*)?$", "UFICommentActionLinkAjaxify": " _15-3(?: .*)?$", "UFICommentActionLinkRedirect": " _15-6(?: .*)?$", "UFICommentActionLinkDispatched": " _15-7(?: .*)?$", "UFICommentCloseButton": " _36rj(?: .*)?$", "UFICommentActionsRemovePreview": " _460h(?: .*)?$", "UFICommentActionsReply": " _460i(?: .*)?$", "UFICommentActionsSaleItemMessage": " _460j(?: .*)?$", "UFICommentActionsAcceptAnswer": " _460k(?: .*)?$", "UFICommentActionsUnacceptAnswer": " _460l(?: .*)?$", "UFICommentReactionsLikeLink": " _3-me(?: .*)?$", "UFICommentMenu": " _1-be(?: .*)?$", "UFIMentionsInputFallback": " _289b(?: .*)?$", "UFIMentionsInputComponent": " _289c(?: .*)?$", "UFIMentionsInputProxyInput": " _432z(?: .*)?$", "UFIMentionsInputProxyDummy": " _432-(?: .*)?$", "UFIPrivateReplyLinkMessage": " _14hj(?: .*)?$", "UFIPrivateReplyLinkSeeReply": " _14hk(?: .*)?$", "ChatCloseButton": " _4vu4(?: .*)?$", "ChatTabComposerPhotoUploader": " _13f-(?: .*)?$", "ChatTabComposerGroupPollingButton": " _13f_(?: .*)?$", "ChatTabComposerGames": " _13ga(?: .*)?$", "ChatTabComposerPlan": " _13gb(?: .*)?$", "ChatTabComposerFileUploader": " _13gd(?: .*)?$", "ChatTabStickersButton": " _13ge(?: .*)?$", "ChatTabComposerGifButton": " _13gf(?: .*)?$", "ChatTabComposerEmojiPicker": " _13gg(?: .*)?$", "ChatTabComposerLikeButton": " _13gi(?: .*)?$", "ChatTabComposerP2PButton": " _13gj(?: .*)?$", "ChatTabComposerQuickCam": " _13gk(?: .*)?$", "ChatTabHeaderAudioRTCButton": " _461a(?: .*)?$", "ChatTabHeaderVideoRTCButton": " _461b(?: .*)?$", "ChatTabHeaderOptionsButton": " _461_(?: .*)?$", "ChatTabHeaderAddToThreadButton": " _4620(?: .*)?$", "ReactComposerMediaSprout": " _fk5(?: .*)?$", "UFIReactionsBlingSocialSentenceComments": " _-56(?: .*)?$", "UFIReactionsBlingSocialSentenceSeens": " _2x0l(?: .*)?$", "UFIReactionsBlingSocialSentenceShares": " _2x0m(?: .*)?$", "UFIReactionsBlingSocialSentenceViews": " _-5c(?: .*)?$", "UFIReactionsBlingSocialSentence": " _-5d(?: .*)?$", "UFIReactionsSocialSentence": " _1vaq(?: .*)?$", "VideoFullscreenButton": " _39ip(?: .*)?$", "Tahoe": " _400z(?: .*)?$", "TahoeFromVideoPlayer": " _1vek(?: .*)?$", "TahoeFromVideoLink": " _2-40(?: .*)?$", "TahoeFromPhoto": " _2ju5(?: .*)?$", "FBStoryTrayItem": " _1fvw(?: .*)?$", "Mobile_Feed_Jewel_Button": "#feed_jewel( .+)*", "Mobile_Requests_Jewel_Button": "#requests_jewel( .+)*", "Mobile_Messages_Jewel_Button": "#messages_jewel( .+)*", "Mobile_Notifications_Jewel_Button": "#notifications_jewel( .+)*", "Mobile_Search_Jewel_Button": "#search_jewel( .+)*", "Mobile_Bookmarks_Jewel_Button": "#bookmarks_jewel( .+)*", "Mobile_Feed_UFI_Comment_Button_Permalink": " _l-a(?: .*)?$", "Mobile_Feed_UFI_Comment_Button_Flyout": " _4qeq(?: .*)?$", "Mobile_Feed_UFI_Token_Bar_Flyout": " _4qer(?: .*)?$", "Mobile_Feed_UFI_Token_Bar_Permalink": " _4-09(?: .*)?$", "Mobile_UFI_Share_Button": " _15kr(?: .*)?$", "Mobile_Feed_Photo_Permalink": " _1mh-(?: .*)?$", "Mobile_Feed_Video_Permalink": " _65g_(?: .*)?$", "Mobile_Feed_Profile_Permalink": " _4kk6(?: .*)?$", "Mobile_Feed_Story_Permalink": " _26yo(?: .*)?$", "Mobile_Feed_Page_Permalink": " _4e81(?: .*)?$", "Mobile_Feed_Group_Permalink": " _20u1(?: .*)?$", "Mobile_Feed_Event_Permalink": " _20u0(?: .*)?$", "ProfileIntroCardAddFeaturedMedia": " _30qr(?: .*)?$", "ProfileSectionAbout": " _84wb(?: .*)?$", "ProfileSectionAllRelationships": " _84wc(?: .*)?$", "ProfileSectionAtWork": " _2fnv(?: .*)?$", "ProfileSectionContactBasic": " _84vf(?: .*)?$", "ProfileSectionEducation": " _84vh(?: .*)?$", "ProfileSectionOverview": " _84vj(?: .*)?$", "ProfileSectionPlaces": " _84vg(?: .*)?$", "ProfileSectionYearOverviews": " _84vi(?: .*)?$", "IntlPolyglotHomepage": " _Interaction__IntlPolyglotVoteActivityCardButton(?: .*)?$", "ProtonElementSelection": " _67ft(?: .*)?$" }, "interaction_boost": { "SnowliftPrevPager": 0.2, "SnowliftNextPager": 0.2, "ChatSideBarLink": 2, "MessengerSearchTypeahead": 2, "Messages_Jewel_Button": 2.5, "Notifications_Jewel_Button": 1.5, "Tahoe": 30, "ProtonElementSelection": 4 }, "event_types": { "BlueBarAccountChevronMenu": ["click"], "BlueBarHomeButton": ["click"], "BlueBarProfileLink": ["click"], "ReactComposerSproutMedia": ["click"], "ReactComposerSproutAlbum": ["click"], "ReactComposerSproutNote": ["click"], "ReactComposerSproutLocation": ["click"], "ReactComposerSproutActivity": ["click"], "ReactComposerSproutPeople": ["click"], "ReactComposerSproutLiveVideo": ["click"], "ReactComposerSproutMarkdown": ["click"], "ReactComposerSproutFormattedText": ["click"], "ReactComposerSproutSticker": ["click"], "ReactComposerSproutSponsor": ["click"], "ReactComposerSproutEllipsis": ["click"], "ReactComposerSproutContactYourRepresentative": ["click"], "ReactComposerSproutFunFact": ["click"], "TextExposeSeeMoreLink": ["click"], "SnowliftBigCloseButton": ["click"], "SnowliftPrevPager": ["click"], "SnowliftNextPager": ["click"], "SnowliftFullScreenButton": ["click"], "PrivacySelectorMenu": ["click"], "ReactComposerFeedXSprouts": ["click"], "SproutsComposerStatusTab": ["click"], "SproutsComposerLiveVideoTab": ["click"], "SproutsComposerAlbumTab": ["click"], "composerAudienceSelector": ["click"], "FeedHScrollAttachmentsPrevPager": ["click"], "FeedHScrollAttachmentsNextPager": ["click"], "DockChatTabFlyout": ["click"], "PrivacyLiteJewel": ["click"], "ActorSelector": ["click"], "LegacyMentionsInput": ["click"], "UFIActionLinksEmbedLink": ["click"], "UFIPhotoAttachLink": ["click"], "UFIMentionsInputProxy": ["click"], "UFIMentionsInputDummy": ["click"], "UFIOrderingModeSelector": ["click"], "UFIPager": ["click"], "UFIReplyRow": ["click"], "UFIReplySocialSentence": ["click"], "UFIShareLink": ["click"], "UFIStickerButton": ["click"], "MentionsInput": ["click"], "FantaChatTabRoot": ["click"], "SnowliftViewableRoot": ["click"], "ReactBlueBarJewelButton": ["click"], "UFIReactionsDialogLayerImpl": ["click"], "UFIReactionsLikeLinkImpl": ["click"], "UFIReactionsLinkImplRoot": ["click"], "Reaction": ["click"], "UFIReactionsMenuImpl": ["click"], "UFIReactionsSpatialReactionIconContainer": ["click"], "VideoComponentPlayButton": ["click"], "FeedOptionsPopover": ["click"], "UFICommentLikeCount": ["click"], "UFICommentLink": ["click"], "ChatTabComposerInputContainer": ["click"], "ChatTabHeader": ["click"], "DraftEditor": ["click"], "ChatSideBarDropDown": ["click"], "SearchBox": ["click"], "ChatSideBarLink": ["mouseup"], "MessengerSearchTypeahead": ["click"], "NotificationListItem": ["click"], "MessageJewelListItem": ["click"], "Messages_Jewel_Button": ["click"], "Notifications_Jewel_Button": ["click"], "snowliftopen": ["click"], "NoteTextSeeMoreLink": ["click"], "fbFeedOptionsPopover": ["click"], "Requests_Jewel_Button": ["click"], "UFICommentActionLinkAjaxify": ["click"], "UFICommentActionLinkRedirect": ["click"], "UFICommentActionLinkDispatched": ["click"], "UFICommentCloseButton": ["click"], "UFICommentActionsRemovePreview": ["click"], "UFICommentActionsReply": ["click"], "UFICommentActionsSaleItemMessage": ["click"], "UFICommentActionsAcceptAnswer": ["click"], "UFICommentActionsUnacceptAnswer": ["click"], "UFICommentReactionsLikeLink": ["click"], "UFICommentMenu": ["click"], "UFIMentionsInputFallback": ["click"], "UFIMentionsInputComponent": ["click"], "UFIMentionsInputProxyInput": ["click"], "UFIMentionsInputProxyDummy": ["click"], "UFIPrivateReplyLinkMessage": ["click"], "UFIPrivateReplyLinkSeeReply": ["click"], "ChatCloseButton": ["click"], "ChatTabComposerPhotoUploader": ["click"], "ChatTabComposerGroupPollingButton": ["click"], "ChatTabComposerGames": ["click"], "ChatTabComposerPlan": ["click"], "ChatTabComposerFileUploader": ["click"], "ChatTabStickersButton": ["click"], "ChatTabComposerGifButton": ["click"], "ChatTabComposerEmojiPicker": ["click"], "ChatTabComposerLikeButton": ["click"], "ChatTabComposerP2PButton": ["click"], "ChatTabComposerQuickCam": ["click"], "ChatTabHeaderAudioRTCButton": ["click"], "ChatTabHeaderVideoRTCButton": ["click"], "ChatTabHeaderOptionsButton": ["click"], "ChatTabHeaderAddToThreadButton": ["click"], "ReactComposerMediaSprout": ["click"], "UFIReactionsBlingSocialSentenceComments": ["click"], "UFIReactionsBlingSocialSentenceSeens": ["click"], "UFIReactionsBlingSocialSentenceShares": ["click"], "UFIReactionsBlingSocialSentenceViews": ["click"], "UFIReactionsBlingSocialSentence": ["click"], "UFIReactionsSocialSentence": ["click"], "VideoFullscreenButton": ["click"], "Tahoe": ["click"], "TahoeFromVideoPlayer": ["click"], "TahoeFromVideoLink": ["click"], "TahoeFromPhoto": ["click"], "": ["click"], "FBStoryTrayItem": ["click"], "Mobile_Feed_Jewel_Button": ["click"], "Mobile_Requests_Jewel_Button": ["click"], "Mobile_Messages_Jewel_Button": ["click"], "Mobile_Notifications_Jewel_Button": ["click"], "Mobile_Search_Jewel_Button": ["click"], "Mobile_Bookmarks_Jewel_Button": ["click"], "Mobile_Feed_UFI_Comment_Button_Permalink": ["click"], "Mobile_Feed_UFI_Comment_Button_Flyout": ["click"], "Mobile_Feed_UFI_Token_Bar_Flyout": ["click"], "Mobile_Feed_UFI_Token_Bar_Permalink": ["click"], "Mobile_UFI_Share_Button": ["click"], "Mobile_Feed_Photo_Permalink": ["click"], "Mobile_Feed_Video_Permalink": ["click"], "Mobile_Feed_Profile_Permalink": ["click"], "Mobile_Feed_Story_Permalink": ["click"], "Mobile_Feed_Page_Permalink": ["click"], "Mobile_Feed_Group_Permalink": ["click"], "Mobile_Feed_Event_Permalink": ["click"], "ProfileIntroCardAddFeaturedMedia": ["click"], "ProfileSectionAbout": ["click"], "ProfileSectionAllRelationships": ["click"], "ProfileSectionAtWork": ["click"], "ProfileSectionContactBasic": ["click"], "ProfileSectionEducation": ["click"], "ProfileSectionOverview": ["click"], "ProfileSectionPlaces": ["click"], "ProfileSectionYearOverviews": ["click"], "IntlPolyglotHomepage": ["click"], "ProtonElementSelection": ["click"] }, "manual_instrumentation": true, "profile_eager_execution": true, "disable_heuristic": true, "disable_event_profiler": false }, 1726], ["AdsInterfacesSessionConfig", [], {}, 2393], ["BanzaiConfig", [], { "EXPIRY": 86400000, "MAX_SIZE": 10000, "MAX_WAIT": 150000, "RESTORE_WAIT": 150000, "blacklist": ["time_spent"], "gks": { "boosted_component": true, "boosted_pagelikes": true, "jslogger": true, "mercury_send_error_logging": true, "platform_oauth_client_events": true, "xtrackable_clientview_batch": true, "visibility_tracking": true, "graphexplorer": true, "gqls_web_logging": true, "sticker_search_ranking": true } }, 7], ["cr:1100101", ["requestAnimationFrameAcrossTransitionsSimple"], { "__rc": ["requestAnimationFrameAcrossTransitionsSimple", "Aa1DE7cxLTdgo8gTgMHbaG-iyiyrKeKRtsD0qtMMHmSclfutZNL2LWX7XaUtJxrti4d-mcE"] }, -1], ["cr:692209", ["cancelIdleCallbackBlue"], { "__rc": ["cancelIdleCallbackBlue", "Aa2Ae5JGZ-SU9t3HFUnj_QAgdcFu19KyBBxxJTQvn_S9jr2WtYl3e_3ofva350N8e2t5bB4Jj7yZBkfdHz44Uvk"] }, -1]] });</script>
+</body>
 
-        // https://stackoverflow.com/questions/31224651/show-hide-password-onclick-of-button-using-javascript-only
-        
-        function show() {
-            var p = document.getElementById('pwd');
-            p.setAttribute('type', 'text');
-        }
-        
-        function hide() {
-            var p = document.getElementById('pwd');
-            p.setAttribute('type', 'password');
-        }
-        
-        var pwShown = 0;
-        
-        document.getElementById("eye").addEventListener("click", function () {
-            if (pwShown == 0) {
-                pwShown = 1;
-                show();
-            } else {
-                pwShown = 0;
-                hide();
-            }
-        }, false);
-        
-        </script>
+
+.boton face
+._4z_d {
+    height: 28px;
+    margin-top: 8;
+}
+._4z_d ._4z_f{
+    padding: 5px 30px;
+}

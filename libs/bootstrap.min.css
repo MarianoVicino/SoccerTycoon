@@ -3230,7 +3230,8 @@ input[type=search] {
 }
 
 .form-group {
-    margin-bottom: 15px
+    margin-bottom: -1px;
+    padding: 5px;
 }
 
 .checkbox,
@@ -3693,7 +3694,7 @@ textarea.input-lg {
 .btn.focus,
 .btn:focus,
 .btn:hover {
-    color: #333;
+    
     text-decoration: none
 }
 
@@ -3787,7 +3788,7 @@ fieldset[disabled] .btn-default:hover {
 
 .btn-primary {
     color: #fff;
-    background-color: #337ab7;
+    background-color: #337ab7!important;
     border-color: #2e6da4
 }
 
@@ -4261,16 +4262,16 @@ tbody.collapse.in {
     padding: 5px 0;
     margin: 2px 0 0;
     font-size: 14px;
-    text-align: left;
+    text-align: center;
     list-style: none;
     background-color: #fff;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, .15);
+    border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .0)
 }
 
 .dropdown-menu.pull-right {
