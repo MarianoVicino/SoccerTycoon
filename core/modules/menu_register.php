@@ -16,8 +16,8 @@
 <div class="menu-box">
     <div class="container-fluid nav-bg">
         <header>
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
+            <nav class="navbar navbar-default ">
+                <div class="container-fluid ">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed btn-lg" id="show-hide" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
@@ -119,16 +119,14 @@
                                 }
 
                                 .nav-menu li ul li {
-                                    display: none;
+                                   
                                     margin: 0;
                                     position: absolute;
 
                                     background: rgba(0, 0, 0, .5);
                                 }
 
-                                .nav li:hover>ul li {
-                                    display: block;
-                                }
+                               
 
                                 h3 {
                                     font-size: auto;
@@ -162,9 +160,9 @@
                                             <li class="px-3 py-2" style="
     margin-top: 13px;
 ">
-                                                <form class="form" role="form">
+                                                <form method="POST" action="#" id="login_form" role="form" >
                                                     Login whit
-                                                    <div class="social-buttons" style="/*! display: inline-block; */">
+                                                    <div class="social-buttons" style=" display: inline-block; ">
                                                         <a href="#" class="btn btn-fb" style="width:47%"><i class="fa fa-facebook"></i> Facebook</a><a href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;access_type=online&amp;client_id=103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fsoccertycoon.com%2Findex.php&amp;state&amp;scope=email%20profile&amp;approval_prompt=auto" class="btn btn-g" style="width:47%"><i class="fa fa-GOOGLE"></i> GOOGLE</a>
                                                     </div>
                                                     <div class="form-group">
