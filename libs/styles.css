@@ -160,8 +160,9 @@ body {
 
 .form-group .input-group {
     width: 100% !important;
+    font-size: bold;
 }
-
+A:hover {text-decoration: none;}
 .icon-menu2 {
     margin-top: 5%;
     margin-bottom: 6.5%;
@@ -517,6 +518,9 @@ body {
     .navbar-nav-user>li>a {
         padding-top: 5px;
         padding-bottom: 0px;
+    }
+    .slogan img {
+        width: 45%;
     }
     .nav-menu li{
         display: none!important;
