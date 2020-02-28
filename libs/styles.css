@@ -510,12 +510,16 @@ body {
     .slogan {
         margin-top: 10%;
     }
+    
 }
 
 @media (max-width: 768px) {
     .navbar-nav-user>li>a {
         padding-top: 5px;
         padding-bottom: 0px;
+    }
+    .nav-menu li{
+        display: none!important;
     }
     .push-sm {
         margin: 6% 0%;

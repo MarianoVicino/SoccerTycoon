@@ -4,6 +4,11 @@
         list-style: none;
     }
 
+    .navbar-collapse.in {
+        overflow: none;
+        overflow-y: none;
+    }
+
     ._4z_d {
         height: 28px;
         margin-top: 8;
@@ -16,8 +21,8 @@
 <div class="menu-box">
     <div class="container-fluid nav-bg">
         <header>
-            <nav class="navbar navbar-default ">
-                <div class="container-fluid ">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed btn-lg" id="show-hide" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
@@ -25,6 +30,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+
                         <a href="https://soccertycoon.com/index.php">
                             <img svg="" version="1.1" id="Capa_1" class="logo_panel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 560 288" style="enable-background:new 0 0 560 288;" xml:space="preserve">
                             <style>
@@ -119,14 +125,14 @@
                                 }
 
                                 .nav-menu li ul li {
-                                   
+
                                     margin: 0;
                                     position: absolute;
 
                                     background: rgba(0, 0, 0, .5);
                                 }
 
-                               
+
 
                                 h3 {
                                     font-size: auto;
@@ -145,22 +151,61 @@
                                     margin-left: auto;
                                     margin-right: auto;
                                 }
+
+                                @media (min-width:769px) {
+
+                                    #bs-example-navbar-collapse-1,
+                                    .navbar-collapse.collapse,
+                                    .collapse_in {
+                                        display: none !important;
+                                    }
+
+                                    @media (max-width: 768px) {
+
+                                        .nav-menu li  {
+                                            display: none !important;
+                                        }
+
+                                    }
+                                }
                             </style>
                             <text transform="matrix(1 0 0 1 125.9769 140.1446)" class="st0 st1">SOCCER TYCOON</text>
 
                         </a>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="border:0px transparent;">
+
+                            <li class="px-3 py-2" style="list-style: none;max-height: 60%; overflow-y: none!important;width: 100%;text-align: center;margin-right: auto;margin-right: auto;padding: 0;">
+                                <form class="form" role="form">
+                                    <h2>Login whit</h2>
+                                    <div class="social-buttons" style=" display: inline-block; ">
+                                        <a href="#" class="btn btn-fb" style="width:47%"><i class="fa fa-facebook"></i> Facebook</a><a href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;access_type=online&amp;client_id=103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fsoccertycoon.com%2Findex.php&amp;state&amp;scope=email%20profile&amp;approval_prompt=auto" class="btn btn-g" style="width:47%"><i class="fa fa-GOOGLE"></i> GOOGLE</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="password" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
+                                    </div>
+                                </form>
+                            </li>
+
+                        </div>
                     </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="border:0px transparent;">
+                    <div>
                         <ul class="nav navbar-nav navbar-right">
                             <header class="head-form">
                                 <ul class="nav-menu">
-                                    <li class="">
+                                    <li class="logg">
                                         <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle" aria-expanded="false">Login </button>
-                                        <ul class="dropdown-menu dropdown-menu-right mt-2">
-                                            <li class="px-3 py-2" style="
-    margin-top: 13px;
-">
-                                                <form method="POST" action="#" id="login_form" role="form" >
+                                        <ul class="dropdown-menu dropdown-menu-right mt-3">
+                                            <li class="px-3 py-2" style="margin-top: 13px;">
+                                                <form class="form" role="form">
                                                     Login whit
                                                     <div class="social-buttons" style=" display: inline-block; ">
                                                         <a href="#" class="btn btn-fb" style="width:47%"><i class="fa fa-facebook"></i> Facebook</a><a href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;access_type=online&amp;client_id=103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fsoccertycoon.com%2Findex.php&amp;state&amp;scope=email%20profile&amp;approval_prompt=auto" class="btn btn-g" style="width:47%"><i class="fa fa-GOOGLE"></i> GOOGLE</a>
