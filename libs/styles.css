@@ -522,6 +522,12 @@ A:hover {text-decoration: none;}
     .slogan img {
         width: 45%;
     }
+    .col-md-12{
+        display:grid;
+    }
+    .center-block{
+        margin: 0;
+    }
     .nav-menu li{
         display: none!important;
     }

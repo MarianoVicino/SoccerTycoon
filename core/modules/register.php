@@ -120,6 +120,7 @@ global $HOME;
         background-size: 100% 100%;
     }
 
+
     .btn-fb {
         box-shadow: inset 0px 1px 0px 0px #9fb4f2;
         background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
@@ -157,8 +158,8 @@ global $HOME;
             <h3 class="module-title text-center" style="padding-top:0px; margin-top:0px; font-family: oblique bold,Verdana">REGISTER WITH</h3>
             <div class="social-buttons" method="POST" action="#" id="register_form" class="text-center" style="padding-top:0px; margin-top:0%;text-align:center;">
             <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
-                <div class="g-signin2" data-onsuccess="onSignIn"></div> 
-                    
+            <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=125231578816554&kid_directed_site=0&app_id=125231578816554&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fapp_id%3D125231578816554%26auth_type%26cbt%3D1582922362893%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fconnect%252Fxd_arbiter.php%253Fversion%253D45%2523cb%253Df1515f16071120c%2526domain%253Dsoccertycoon.com%2526origin%253Dhttps%25253A%25252F%25252Fsoccertycoon.com%25252Ff2cffdb816ca506%2526relation%253Dopener%26client_id%3D125231578816554%26display%3Dpopup%26domain%3Dsoccertycoon.com%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fsoccertycoon.com%252F%26id%3Df2a62acf81a27de%26locale%3Des_ES%26logger_id%3Da9c08049-475b-454a-965b-275451e6af3a%26origin%3D1%26plugin_prepare%3Dtrue%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fconnect%252Fxd_arbiter.php%253Fversion%253D45%2523cb%253Df22f785f88d0b6%2526domain%253Dsoccertycoon.com%2526origin%253Dhttps%25253A%25252F%25252Fsoccertycoon.com%25252Ff2cffdb816ca506%2526relation%253Dopener.parent%2526frame%253Df2a62acf81a27de%26ref%3DLoginButton%26response_type%3Dsigned_request%252Ctoken%252Cgraph_domain%26scope%26sdk%3Djoey%26size%3D%257B%2522width%2522%253A600%252C%2522height%2522%253A679%257D%26url%3Ddialog%252Foauth%26ret%3Dlogin%26fbapp_pres%3D0&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D45%23cb%3Df22f785f88d0b6%26domain%3Dsoccertycoon.com%26origin%3Dhttps%253A%252F%252Fsoccertycoon.com%252Ff2cffdb816ca506%26relation%3Dopener.parent%26frame%3Df2a62acf81a27de%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=es_ES&pl_dbl=0" class="btn btn-fb" style="width:47%"><i class="fa fa-facebook"></i> Facebook</a>
+             <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;access_type=online&amp;client_id=103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fsoccertycoon.com%2Findex.php&amp;state&amp;scope=email%20profile&amp;approval_prompt=auto" class="btn btn-g" style="width:47%"><i class="fa fa-GOOGLE"></i> GOOGLE</a>                                    
              </div>
 
             </BR>
