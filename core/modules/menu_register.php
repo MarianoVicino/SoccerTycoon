@@ -182,10 +182,10 @@
                                         <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;access_type=online&amp;client_id=103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fsoccertycoon.com%2Findex.php&amp;state&amp;scope=email%20profile&amp;approval_prompt=auto" class="btn btn-g" style="width:47%"><i class="fa fa-GOOGLE"></i> GOOGLE</a>
                                     </div>
                                     <div class="form-group">
-                                        <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
+                                        <input id="emailInput" placeholder="user" class="form-control form-control-sm" type="text" required="">
                                     </div>
                                     <div class="form-group">
-                                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="password" required="">
+                                        <input id="passwordInput" placeholder="password" class="form-control form-control-sm" type="password" required="">
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-block">Login</button>

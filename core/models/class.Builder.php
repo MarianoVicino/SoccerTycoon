@@ -976,7 +976,7 @@ class Builder
         require_once("core/models/class.Connection.php");
         require_once("core/models/class.Fn.php");
         $db = new Connection();
-      //  $f = new Fn();
+        $f = new Fn();
         $stmt=$db->prepare("SELECT Regiones_idRegiones FROM Divisiones INNER JOIN Ligas ON Divisiones.idDivisiones=Ligas.Divisiones_idDivisiones INNER JOIN Equipos ON Ligas.idLigas=Equipos.Ligas_idLigas WHERE usuario=?;");
         $stmt->bind_param("s", $user);
         $stmt->bind_result($id_region);
@@ -1019,7 +1019,7 @@ class Builder
         require_once("../../models/class.Connection.php");
         require_once("../../models/class.Fn.php");
         $db=new Connection();
-       // $f=new Fn();
+        $f=new Fn();
         $param=$range+1;
         $range=$range*12;
 		$stringSearchByPos='';
@@ -1275,7 +1275,7 @@ class Builder
         require_once("../../models/class.Connection.php");
         require_once("../../models/class.Fn.php");
         $db=new Connection();
-      //  $f=new Fn();
+        $f=new Fn();
         $param=$range+1;
         $range=$range*12;
 		$stringSearchByPos='';
