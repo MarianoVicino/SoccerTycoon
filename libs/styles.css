@@ -513,7 +513,14 @@ A:hover {text-decoration: none;}
     }
     
 }
-
+@media (max-width:991px){
+    .col-md-12{
+        display:grid;
+    }
+    .center-block{
+        margin: 0;
+    }
+}
 @media (max-width: 768px) {
     .navbar-nav-user>li>a {
         padding-top: 5px;
@@ -522,12 +529,7 @@ A:hover {text-decoration: none;}
     .slogan img {
         width: 45%;
     }
-    .col-md-12{
-        display:grid;
-    }
-    .center-block{
-        margin: 0;
-    }
+   
     .nav-menu li{
         display: none!important;
     }

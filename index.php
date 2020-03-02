@@ -9,21 +9,22 @@
     }
     include("core/models/class.Connection.php");
     $db=new Connection();
-
+   // $_SESSION['user_fmo']="avohche";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>GoalManager - online football manager- fútbol manager online</title>
+        <title>SoccerTycoon - online football manager- fútbol manager online</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="SHORTCUT ICON" href="<?= $HOME; ?>libs/images/icon.ico"/>
         <link rel="stylesheet" href="<?= $HOME; ?>libs/bootstrap.min.css">
-        <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?nocache=">      
+        <link rel="stylesheet" href="<?= $HOME; ?>libs/styles.css?nocache=">   
+        <script src="https://kit.fontawesome.com/926dc0e14d.js" crossorigin="anonymous"></script>   
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="103341539377-e9ekc976l0ossu4o5mtvrekcj8s5456r.apps.googleusercontent.com">
-<meta name="description" content="GoalManager is a strategy soccer game, in which you have the posibility to convert your virtual currency into real money."/> 
+<meta name="description" content="SoccerTycoon is a strategy soccer game, in which you have the posibility to convert your virtual currency into real money."/> 
         <?php 
             if(isset($_GET['module']))
             {
