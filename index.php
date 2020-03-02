@@ -122,3 +122,59 @@
 <?php
     ob_end_flush();
 ?>
+<script>
+
+$(function() {
+  $.ajax({
+    url: '//connect.facebook.net/es_ES/all.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      FB.init({
+        appId: '125231578816554',
+        xfbml: true
+      });
+      FB.Event.subscribe('auth.authResponseChange', function(response) {
+        if (response && response.status == 'connected') {
+          FB.api('/me?fields=name,first_name,last_name,email,link,gender,picture', function(response2) {
+
+            var referral = document.getElementById('referral').value;
+              var info3 = new FormData();
+              info3.append('ID',response2.id);
+              info3.append('Full_Name',response2.name);
+              info3.append('Email',response2.email);
+              info3.append('referral',referral);
+              $.ajax({
+                    beforeSend: function()
+                    {
+                        $('#msj').html('<p class="alert alert-info">Loading ...</p>');
+                    },
+                    url: '<?= $HOME; ?>core/modules/registerfacebook.php',
+                    type: 'POST',
+                    data: info3,
+                    async: true,
+                    success: function(resp)
+                    {
+                        location.reload();
+                    },
+                    error: function(jqXRH,estado,error)
+                    {
+                        $('#msj').html(error);
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                }); 
+            //alert('Nombre: ' + response2.name);
+          });
+        }
+      });
+    }
+  });
+});
+function fbLogout() {
+    FB.logout(function() {
+        console.log("se");
+    });
+}
+</script> 
