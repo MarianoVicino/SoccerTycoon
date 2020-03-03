@@ -7,18 +7,23 @@ class Builder
         require_once("core/models/class.Connection.php");
         $db=new Connection();
         $stmt=$db->prepare("SELECT idEquipos FROM Equipos WHERE fantasma=0;");
-        $stmt->execute();
-        $stmt->store_result();
-        $number=$stmt->num_rows;
-        $stmt->close();
-        $db->close();
-        echo $number+350;
+        if($stmt->num_rows > 0){
+            $stmt->execute();
+            $stmt->store_result();
+            $number=$stmt->num_rows;
+            $stmt->close();
+            $db->close();
+            echo $number+350;
+        }else{
+            echo 0;
+        }
+        
     }   
     public function GetRegions()
     {
         require_once("core/models/class.Connection.php");
         $db=new Connection();
-        $stmt=$db->prepare("SELECT idRegiones,nombre_reg FROM Regiones INNER JOIN Divisiones ON Regiones.idRegiones=Divisiones.Regiones_idRegiones WHERE rango_div=4;");
+        $stmt=$db->prepare("SELECT idRegiones,nombre_reg FROM Regiones INNER JOIN Divisiones ON Regiones.idRegiones=Divisiones.Regiones_idRegiones WHERE rango_div=1;");
         $stmt->bind_result($id,$name);
         $stmt->execute();
         while($stmt->fetch())
@@ -278,8 +283,8 @@ class Builder
     public function GetNextMatch($user)
     {
 		
-		$time1 = $this->getNextRunTime(['i' => 0, 'H' => 4, 'd' => 90, 'm' => 90]);
-		$time2 = $this->getNextRunTime(['i' => 0, 'H' => 16, 'd' => 90, 'm' => 90]);
+		$time1 = $this->getNextRunTime(['i' => 0, 'H' => 0, 'd' => 0, 'm' => 0]);
+		$time2 = $this->getNextRunTime(['i' => 0, 'H' => 24, 'd' => 01, 'm' => 01]);
 		$time = min($time1, $time2);
 		
 		?>

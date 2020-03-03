@@ -36,12 +36,12 @@ class User
     {
         $user=mb_strtolower($user,'UTF-8');
         $email=mb_strtolower($email,'UTF-8');
-        if($fr == 3){
-            require_once("../models/class.Connection.php");
-        }elseif($fr){
+        if($fr){
             require_once("../../models/class.Connection.php");
-        }else{
+        }elseif($fr == 3){
             require_once("../models/class.Connection.php");
+        }else{
+            require_once("core/models/class.Connection.php");
         }
         
         $db=new Connection();
@@ -82,7 +82,7 @@ class User
                 //tomo un equipo fantasma
                 $stmt->fetch();
                 $n_real_teams++;
-                if($n_real_teams==30)
+                if($n_real_teams==16)
                 {
                     $full=1;
                 }
@@ -115,7 +115,7 @@ class User
             else
             {
                 //consigo el id de la division mas baja de la region
-                $stmt=$db->prepare("SELECT idDivisiones FROM Divisiones WHERE Regiones_idRegiones=? AND rango_div=4;");
+                $stmt=$db->prepare("SELECT idDivisiones FROM Divisiones WHERE Regiones_idRegiones=? AND rango_div=1;");
                 $stmt->bind_param("i", $region);
                 $stmt->bind_result($id_division);
                 $stmt->execute();
@@ -146,7 +146,7 @@ class User
                     require_once("../../models/class.Fn.php");
                     $f=new Fn();
                     $teams=array();
-                    for($i=1;$i<=30;$i++)
+                    for($i=1;$i<=16;$i++)
                     {
                         // CREO EQUIPO QUE USARA EL JUGADOR
                         if($i==1)
@@ -154,7 +154,7 @@ class User
                             $nombre=$user." team";
                             $password=hash('sha512', mb_strtolower($password,'UTF-8'));
                             $email=mb_strtolower($email,'UTF-8');
-                            $stmt=$db->prepare("INSERT INTO Equipos (nombre,score,usuario,clave,email,oro,fantasma,formacion,nombre_formacion,Ligas_idLigas,referral) VALUES (?,0,?,?,?,0,0,1,'4-4-2',?,?);");
+                            $stmt=$db->prepare("INSERT INTO Equipos (nombre,score,usuario,clave,email,oro,fantasma,formacion,nombre_formacion,Ligas_idLigas,referral,asignado) VALUES (?,0,?,?,?,0,0,1,'4-4-2',?,?,0);");
                             $stmt->bind_param("ssssii", $nombre,$user,$password,$email,$id_league,$ref);
                             $stmt->execute();
                             $teams[]=$stmt->insert_id;

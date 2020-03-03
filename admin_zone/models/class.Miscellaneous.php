@@ -266,7 +266,7 @@ class Miscellaneous
         {
             $stmt->fetch();
             $nombre="Team ".($id_team-1);
-            $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario='',clave='',email='',email_paypal='',email_mercadopago='',email_neteller='',fantasma=1,asignado=1 WHERE usuario=?;");
+            $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario=NULL,clave=NULL,email=NULL,email_paypal=NULL,email_mercadopago=NULL,email_neteller=NULL,fantasma=1,asignado=1,oro=1000 WHERE usuario=?;");
             $stmt->bind_param("ss", $nombre,$user);
             $stmt->execute();
             /*if($rangue==4)
@@ -275,7 +275,7 @@ class Miscellaneous
                 {
                     $full=0;
                 }
-                $buscar = mysqli_query($db, "SELECT equipos_reales FROM `ligas` WHERE idLigas='".$id_league."'");
+                $buscar = mysqli_query($db, "SELECT equipos_reales FROM `Ligas` WHERE idLigas='".$id_league."'");
                 if($buscar->num_rows >0){
                     $stmt=$db->prepare("UPDATE Ligas SET equipos_reales=equipos_reales-1,full=? WHERE idLigas=?;");
                     $stmt->bind_param("ii", $full,$id_league);
