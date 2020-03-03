@@ -380,7 +380,7 @@ class Builder
                     echo '<h4 class="nom-nop"><img class="mini-team-logo" src="data:image/',$type_shield,';base64,'.base64_encode($team_shield).'"> ',$team_name,' <small>',$score,'</small></h4>';
                 } 
             }
-            echo '<h4 class="text-right show_fixture"><small><a href="fixture">SHOW FULL FIXTURE</a></small></h4>';
+            echo '<h4 class="text-right show_fixture"><small><a href="?module=fixture">SHOW FULL FIXTURE</a></small></h4>';
         }
         else
         {

@@ -1,5 +1,10 @@
 <!-- TEAM INFO -->
         <div class="col-md-3 col-sm-5 col-xs-12">
+            Hora del Servidor <div class="clock">
+    <span id="hours" class="hours"></span> :
+    <span id="minutes" class="minutes"></span> :
+    <span id="seconds" class="seconds"></span>
+</div>
             <div class="dashboard-item-box text-center">
                 <?php 
                     $builder->GetTeamInfo($_SESSION['user_fmo']); 
@@ -41,4 +46,3 @@
                 <br>
             </div>
         </div>
-
