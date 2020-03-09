@@ -1376,7 +1376,7 @@ class Builder
                         <div class="caption">
                             <h4 class="text-center upgrade_title">Pack ',$jugadores,' Players</h4>
                             <h5 class="text-center nom-nop player_price">U$S ', number_format($price, 2,",","."),'</h5>
-                            <h5 class="text-center nom-nop player_price">Coins ', number_format($coins, 0,",","."),'</h5>
+                            <h5 class="text-center nom-nop player_price">St ', number_format($coins, 0,",","."),'</h5>
                                
                         </div>
                         <div class="form-group">
@@ -1384,7 +1384,7 @@ class Builder
                                 <option value="0" hidden>Select a payment method ...</option>
                                 <option value="1">Paypal</option>
                                 <option value="2">Mercadopago</option>
-                                <option value="3">Coins</option>
+                                <option value="3">St</option>
                             </select>
                         </div> 
                         <button class="btn btn-primary center-block buy_players" value="',$id_pack,'">BUY</button> 
@@ -1402,7 +1402,7 @@ class Builder
                     <div class="thumbnail">
                         <img class="img-responsive" src="libs/images/coins_pack.png">
                         <div class="caption">
-                            <h4 class="text-center upgrade_title">Pack ',$coins,' Coins</h4>
+                            <h4 class="text-center upgrade_title">Pack ',$coins,' St</h4>
                             <h5 class="text-center nom-nop player_price">U$S ', number_format($price, 2,",","."),'</h5>
                                
                         </div>
@@ -1451,7 +1451,7 @@ class Builder
             echo ' </select>
                 </div>
                 <div class="form-group">
-                    <input type="number" min="140000" max="',$balance,'" class="form-control" name="coins" placeholder="AMOUNT OF COINS YOU WOULD LIKE TO EXCHANGE" required>
+                    <input type="number" min="140000" max="',$balance,'" class="form-control" name="coins" placeholder="AMOUNT OF ST YOU WOULD LIKE TO EXCHANGE" required>
                 </div>
                 <div class="withdrawal_values">
                     <hgroup>

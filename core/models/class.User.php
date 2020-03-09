@@ -96,7 +96,7 @@ class User
                 $nombre=$user." team";
                 $password=hash('sha512', mb_strtolower($password,'UTF-8'));
                 $email=mb_strtolower($email,'UTF-8');
-                $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario=?,clave=?,email=?,oro=0,fantasma=0,referral=?,asignado=0 WHERE idEquipos=?;");
+                $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario=?,clave=?,email=?,oro=10,fantasma=0,referral=?,asignado=0 WHERE idEquipos=?;");
                 $stmt->bind_param("ssssii", $nombre,$user,$password,$email,$ref,$id_e_team);
                 $stmt->execute();
                 $name_stadium=$user." Stadium";
@@ -421,7 +421,7 @@ class User
                     $stmt->bind_param("is", $oro,$id_team);
                     $stmt->execute();
 					$date = date("d/m/Y");
-					$type = 'coin';
+					$type = 'st';
 					$stmt=$db->prepare("INSERT INTO Compras (monto,fecha,pagado,Equipos_idEquipos,PacksJugador_idPacksJugador,Pago) VALUES (?,?,1,?,?,?);");
 					$stmt->bind_param("isiis", $price,$date,$id_team,$id_pack,$type);
 					$stmt->execute();
@@ -465,7 +465,7 @@ class User
                                         <h4 class="modal-title" id="myModalLabel">',$title,'</h4>
                                     </div>
                                     <div class="modal-body">
-                                        Paying by  paypal, the accreditation of coins is immediate.
+                                        Paying by  paypal, the accreditation of St is immediate.
                                     </div>
                                     <div class="modal-footer">
                                         <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -492,7 +492,7 @@ class User
                                 "id" => $id_pack,
                                 "title" => $title,
                                 "currency_id" => "USD",
-                                "category_id" => "Pack coins",
+                                "category_id" => "Pack St",
                                 "quantity" => 1,
                                 "unit_price" => $price
                             )
@@ -515,7 +515,7 @@ class User
                                         <h4 class="modal-title" id="myModalLabel">',$title,'</h4>
                                     </div>
                                     <div class="modal-body">
-                                        Pagando por mercado pago, dependiendo la opcion que elija, los coins seran acreditados apenas el pago sea aceptado.
+                                        Pagando por mercado pago, dependiendo la opcion que elija, los St seran acreditados apenas el pago sea aceptado.
                                     </div>
                                     <div class="modal-footer">
                                         <a href="',$preference["response"]["init_point"],'" class="btn btn-primary">Pagar</a>
@@ -553,7 +553,7 @@ class User
         if($stmt->num_rows>0)
         {
             $stmt->fetch();
-            $title="Pack ".$gold." coins";
+            $title="Pack ".$gold." St";
             $stmt=$db->prepare("SELECT idEquipos FROM Equipos WHERE usuario=? LIMIT 1;");
             $stmt->bind_param("s", $user);
             $stmt->bind_result($id_team);
@@ -580,7 +580,7 @@ class User
                                         <h4 class="modal-title" id="myModalLabel">',$title,'</h4>
                                     </div>
                                     <div class="modal-body">
-                                        Paying by  paypal, the accreditation of coins is immediate.
+                                        Paying by  paypal, the accreditation of St is immediate.
                                     </div>
                                     <div class="modal-footer">
                                         <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -607,7 +607,7 @@ class User
                                 "id" => $id_pack,
                                 "title" => $title,
                                 "currency_id" => "USD",
-                                "category_id" => "Pack coins",
+                                "category_id" => "Pack St",
                                 "quantity" => 1,
                                 "unit_price" => $price
                             )
@@ -630,7 +630,7 @@ class User
                                         <h4 class="modal-title" id="myModalLabel">',$title,'</h4>
                                     </div>
                                     <div class="modal-body">
-                                        Pagando por mercado pago, dependiendo la opcion que elija, los coins seran acreditados apenas el pago sea aceptado.
+                                        Pagando por mercado pago, dependiendo la opcion que elija, los St seran acreditados apenas el pago sea aceptado.
                                     </div>
                                     <div class="modal-footer">
                                         <a href="',$preference["response"]["init_point"],'" class="btn btn-primary">Pagar</a>
@@ -769,7 +769,7 @@ class User
             $db->close();
             echo '<div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                You do not have that amount of coins to withdrawal, please try again.
+                                You do not have that amount of St to withdrawal, please try again.
                           </div>';
         }
     }

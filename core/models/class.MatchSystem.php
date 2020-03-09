@@ -180,7 +180,7 @@ class MatchSystem
             $k++;
 			
 			$f = new Fn();
-			$meta = array($award . ' Coins');
+			$meta = array($award . ' St');
 			$f->InsertHistoric($team_topay, 8, $meta);
         }
         $stmtp->close();
@@ -239,7 +239,7 @@ class MatchSystem
             $stmtpl->close();
 			
 			$f = new Fn();
-			$meta = array($charge . ' Coins');
+			$meta = array($charge . ' St');
 			$f->InsertHistoric($charge, 9, $meta);
         }
         $stmtm->close();

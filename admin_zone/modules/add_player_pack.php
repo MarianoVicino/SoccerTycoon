@@ -42,7 +42,7 @@ $(document).ready(function(){
                 <input type="text" name="price" class="form-control" placeholder="PRECIO USD" required>
             </div>
             <div class="form-group">
-				<input type="number" name="gold" class="form-control" placeholder="PRECIO COINS" required>    	
+				<input type="number" name="gold" class="form-control" placeholder="PRECIO ST" required>    	
 			</div>
 			<div class="form-group">
                 <select class="form-control" name="image" id="player">

@@ -34,7 +34,7 @@ if(isset($_POST['email']) && isset($_POST['coins']))
     {
         echo '<div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                Please, insert a valid amount of coins to exchange.
+                                Please, insert a valid amount of St to exchange.
                           </div>';
     }    
 }    

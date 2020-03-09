@@ -126,7 +126,7 @@ YOUR RECOGNITION AND ACCEPTANCE OF THIS CONTRACT IS A CORRECT ALLOCATION OF RISK
 
 <br><br>In the game you can compete against users from around the world, you can think the best strategy to win them all. Buy premium players or players to other users at auction, sell the ones you no longer need,train them to be more strong and position them well on the court to take advantage of their maximum level, use the increase of level of equipment before a game strategically can make you win the match.
 
-<br><br>Win Coins selling tickets,players,winning matches and winning the tournament and exchange that Coins for DOLLARS.<br><br>
+<br><br>Win St selling tickets,players,winning matches and winning the tournament and exchange that St for DOLLARS.<br><br>
 
 
 
@@ -134,7 +134,7 @@ YOUR RECOGNITION AND ACCEPTANCE OF THIS CONTRACT IS A CORRECT ALLOCATION OF RISK
 
 <br><br>En el juego puedes competir contra usuarios de todo el mundo, puedes pensar en la mejor estrategia para ganarles a todos. Compra jugadores premium o jugadores a otros usuarios en una subasta, vende los que ya no necesitas,entrenalos para mejorar tu scoring, posicionalos bien en la cancha para aprovechar su nivel máximo, usar el aumento de nivel de equipo antes de un juego estratégicamente puede hacerte ganar el partido .
 
-<br><br>Gana Coins vendiendo entradas,ganando partidos,ganando el torneo y vende esos coins por DOLARES.
+<br><br>Gana St vendiendo entradas,ganando partidos,ganando el torneo y vende esos St por DOLARES.
       </div>
     </div>
   </div>

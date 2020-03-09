@@ -78,8 +78,8 @@
                                 <li><a href="index.php?module=show_free_players"><span class="glyphicon glyphicon-chevron-right"></span> Ver Jugadores Gratis</a></li>
                                 <li class="dropdown-header">NOTICIAS</li>
                                 <li><a href="index.php?module=add_news"><span class="glyphicon glyphicon-chevron-right"></span> Agregar Noticia</a></li>
-                                <li class="dropdown-header">COINS</li>
-                                <li><a href="index.php?module=add_coins"><span class="glyphicon glyphicon-chevron-right"></span> Agregar Coins</a></li>
+                                <li class="dropdown-header">ST</li>
+                                <li><a href="index.php?module=add_coins"><span class="glyphicon glyphicon-chevron-right"></span> Agregar St</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

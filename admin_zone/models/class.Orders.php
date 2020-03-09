@@ -44,13 +44,13 @@ class Orders
 		
 		foreach($packs as $p){
 			if($p['type'] == '1'){
-				$title = $p['pack'] . ' Coins';
+				$title = $p['pack'] . ' St';
 			}else{
 				$title = $p['pack'] . ' Players';
 			}
 			
 			if($p['pago'] == 'coin'){
-				$price = 'Coins '. number_format($p['price'],0,",",".");
+				$price = 'St '. number_format($p['price'],0,",",".");
 			}else{
 				$price = 'U$S '. number_format($p['price'],2,",",".");
 			}

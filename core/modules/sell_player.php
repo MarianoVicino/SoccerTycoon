@@ -47,7 +47,7 @@ $(document).ready(function(){
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="number" name="price" class="form-control" placeholder="PRICE IN COINS" required>
+                        <input type="number" name="price" class="form-control" placeholder="PRICE IN St" required>
                     </div>
                     <button type="submit" class="btn btn-default center-block">ADD TO TRADE LIST</button>
                 </form>

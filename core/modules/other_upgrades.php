@@ -87,7 +87,7 @@
         </div>
         <div class="row container-fluid ranking_content market_master">
             <hgroup>
-                <h3 class=""><span class="market_title">Buy Stadium Seats</span> <button class="help_box btn btn-link btn-xs" data-toggle="popover" data-placement="bottom" data-container=".market_master" data-title="Help" data-content="The stadium improvements (seats) determines the capacity of tickets that the team will sell, having more seats, more people will attend the meeting and you will earn more coins, every 100 seats you will earn 1 extra coin per local match."><span class="glyphicon glyphicon-question-sign"></span></button></h3>
+                <h3 class=""><span class="market_title">Buy Stadium Seats</span> <button class="help_box btn btn-link btn-xs" data-toggle="popover" data-placement="bottom" data-container=".market_master" data-title="Help" data-content="The stadium improvements (seats) determines the capacity of tickets that the team will sell, having more seats, more people will attend the meeting and you will earn more St, every 100 seats you will earn 1 extra St per local match."><span class="glyphicon glyphicon-question-sign"></span></button></h3>
             </hgroup>
             <div class="col-xs-12 market_upgrade_box">
                 <div id="msj_stadium"></div>

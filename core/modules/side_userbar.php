@@ -18,7 +18,7 @@
                     $builder->GetGold2($_SESSION['user_fmo']); 
                 ?>
                 <hgroup>
-                    <h3 class="nom-nop">My Coins</h3>
+                    <h3 class="nom-nop">My St</h3>
                 </hgroup>
                 <?php 
                     $builder->GetGold($_SESSION['user_fmo']); 

@@ -21,9 +21,9 @@
           
         <div class="dashboard-item-box text-center">
     <h2 class="text-center nom-nop" style="color:orange">Promotion!</h2>
-    <p>By buying the 20dls package for the first time, you will receive the coins & a gift of <span style="color:#70ff4d">1 player with 3000sc</style>.</p>
-    <p>By buying the 50dls package for the first time, you will receive the coins & a gift of  <span style="color:#70ff4d">1 player with 10000sc</style>.</p>
-    <p>By buying the 100dls package for the first time, you will receive the coins & a gift of  <span style="color:#70ff4d">2 player with 10000sc & a bonus of 100k coins</style>.</p>
+    <p>By buying the 20dls package for the first time, you will receive the St & a gift of <span style="color:#70ff4d">1 player with 3000sc</style>.</p>
+    <p>By buying the 50dls package for the first time, you will receive the St & a gift of  <span style="color:#70ff4d">1 player with 10000sc</style>.</p>
+    <p>By buying the 100dls package for the first time, you will receive the St & a gift of  <span style="color:#70ff4d">2 player with 10000sc & a bonus of 100k St</style>.</p>
 
            </div>  <br/>
         </div>

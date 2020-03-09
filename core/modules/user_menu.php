@@ -82,7 +82,7 @@
                                     <li><a href="?module=fixture"><span class="glyphicon glyphicon-chevron-right"></span> My Fixture</a></li>
                                 </ul>
                             </li>
-                            <li class="dashboard_link"><a href="<?php if($re['asignado'] == 1){ echo '?module=buy_coins';}else{ echo '#';} ?>"><span class="glyphicon glyphicon-plus-sign"></span>Buy Coins</a></li>
+                            <li class="dashboard_link"><a href="<?php if($re['asignado'] == 1){ echo '?module=buy_coins';}else{ echo '#';} ?>"><span class="glyphicon glyphicon-plus-sign"></span>Buy St</a></li>
                             <li class="dashboard_link"><a href="<?php if($re['asignado'] == 1){ echo '?module=exchange';}else{ echo '#';} ?>"><span class="glyphicon glyphicon-plus-sign"></span>Exchange</a></li>
                             <li class="dashboard_link"><a href="?module=referrals"><span class="glyphicon glyphicon-user"></span>Referrals</a></li>
                             <li class="dropdown dashboard_link">

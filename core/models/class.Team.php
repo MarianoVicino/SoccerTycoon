@@ -1603,7 +1603,7 @@ class Team
 			
 			require_once("../../models/class.Fn.php");
 			$f=new Fn();
-			$meta = array($price . ' Coins', $name);
+			$meta = array($price . ' St', $name);
 			$f->InsertHistoric($team, 3, $meta);
 			
 			 echo '<div class="alert alert-success alert-dismissible" role="alert">
@@ -1886,7 +1886,7 @@ class Team
 						
 						require_once("../../models/class.Fn.php");
 						$f=new Fn();
-						$meta = array($price . ' Coins', $name);
+						$meta = array($price . ' St', $name);
 						$f->InsertHistoric($id_team, 2, $meta);
 						
                         echo '<div class="alert alert-success alert-dismissible" role="alert">
@@ -1920,7 +1920,7 @@ class Team
                 $db->close();
                 echo '<div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        Sorry, you do not have enough coins to buy this player.
+                        Sorry, you do not have enough St to buy this player.
                     </div>';
             }    
         }    
@@ -1971,7 +1971,7 @@ class Team
 					
 					require_once("../../models/class.Fn.php");
 					$f=new Fn();
-					$meta = array($price . ' Coins', $capacity_upgrade . ' More seats in Stadium');
+					$meta = array($price . ' St', $capacity_upgrade . ' More seats in Stadium');
 					$f->InsertHistoric($id_team, 4, $meta);
 					
                     echo '<div class="alert alert-success alert-dismissible" role="alert">
@@ -1995,7 +1995,7 @@ class Team
                 $db->close();
                 echo '<div class="alert alert-danger alert-dismissible" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        Sorry, you do not have enough coins to buy this upgrade.
+                        Sorry, you do not have enough St to buy this upgrade.
                  </div>';
             }    
         }   
@@ -2153,7 +2153,7 @@ class Team
 			$db3->close();
 			
 			
-			$meta = array($price . ' Coins', 'Regenerate stamina');
+			$meta = array($price . ' St', 'Regenerate stamina');
 			$f->InsertHistoric($team, 4, $meta);
 			
 			echo '<div class="alert alert-success alert-dismissible" role="alert">
@@ -2165,7 +2165,7 @@ class Team
 			$db->close();
 			echo '<div class="alert alert-danger alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					 You do not have enough coins to refill stamina.
+					 You do not have enough St to refill stamina.
 			 </div>';
 		}
 	}
@@ -2200,7 +2200,7 @@ class Team
 			$stmt3->close();
 			$db3->close();
 			
-			$meta = array($price . ' Coins', 'Regenerate stamina');
+			$meta = array($price . ' St', 'Regenerate stamina');
 			$f->InsertHistoric($team, 4, $meta);
 			
 			echo '<div class="alert alert-success alert-dismissible" role="alert">
@@ -2212,7 +2212,7 @@ class Team
 			$db->close();
 			echo '<div class="alert alert-danger alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					 You do not have enough coins to refill stamina.
+					 You do not have enough St to refill stamina.
 			 </div>';
 		}
 	}
@@ -2255,7 +2255,7 @@ class Team
 						$stmt->close();
 						$db->close();
 						
-						$meta = array($price . ' Coins', ' Plus ' . $score . ' to player: ' . $name);
+						$meta = array($price . ' St', ' Plus ' . $score . ' to player: ' . $name);
 						$f->InsertHistoric($id_team, 4, $meta);
 						
 						echo '<div class="alert alert-success alert-dismissible" role="alert">
@@ -2269,7 +2269,7 @@ class Team
 						$db->close();
 						echo '<div class="alert alert-danger alert-dismissible" role="alert">
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								 You do not have enough coins to buy this improvement.
+								 You do not have enough St to buy this improvement.
 						 </div>';
 					}
 				}
@@ -2340,7 +2340,7 @@ class Team
 				require_once("../../models/class.Fn.php");
 				echo '1';
 				$f=new Fn();
-				$meta = array($price . ' Coins', '20% more scoring');
+				$meta = array($price . ' St', '20% more scoring');
 				$f->InsertHistoric($id_team, 4, $meta);
 
                 echo '<div class="alert alert-success alert-dismissible" role="alert">
@@ -2354,7 +2354,7 @@ class Team
                 $db->close();
                 echo '<div class="alert alert-danger alert-dismissible" role="alert">
                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            You do not have enough coins to buy this upgrade.
+                            You do not have enough St to buy this upgrade.
                      </div>';
             }    
         }
@@ -2511,7 +2511,7 @@ class Team
 						//Agrego la data al historico del comprador
 						require_once("../../models/class.Fn.php");
 						$f=new Fn();
-						$meta = array($price . ' Coins', $name);
+						$meta = array($price . ' St', $name);
 						$f->InsertHistoric($team_buyer, 1, $meta);
 						//Agrego la data al historico del vendedor
 						$f->InsertHistoric($team_seller, 3, $meta);
@@ -2537,7 +2537,7 @@ class Team
                     $db->close();
                     echo '<div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                You do not have enough coins to buy ',$name,'.
+                                You do not have enough St to buy ',$name,'.
                      </div>';
                 } 
             }    

@@ -62,7 +62,7 @@
         <div class="len50 center-block">
             <p class="alert alert-info en">
                 <span class="glyphicon glyphicon-info-sign"></span> The minimum amount to withdraw is u$s20, at the time of withdrawal will be charged a fee of 10% per commission and will go directly to a found to collect more money for the division prizes.<br><br>
-                <span class="glyphicon glyphicon-chevron-right"></span> u$s1,00 = 43.000 Coins<br>
+                <span class="glyphicon glyphicon-chevron-right"></span> u$s1,00 = 43.000 St<br>
              
             </p>
             <p class="alert alert-info es">

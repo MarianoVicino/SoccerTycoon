@@ -67,7 +67,7 @@ while($stmt_season->fetch())
                     $stmt_balance->execute();
                     $stmt_balance->close();
 					if($ghost_local == 0){
-						$meta = array($award["match_winner_award"] . ' Coins', $name_guest);
+						$meta = array($award["match_winner_award"] . ' St', $name_guest);
 						$f->InsertHistoric($id_home, 6, $meta);
 					}
                     //AL VISITANTE NO SE LE DA NADA YA QUE PERDIO Y NO ES LOCAL
@@ -101,7 +101,7 @@ while($stmt_season->fetch())
                     $stmt_balance->execute();
                     $stmt_balance->close();
 					if($ghost_guest == 0){
-						$meta = array($award["match_winner_award"] . ' Coins', $name_local);
+						$meta = array($award["match_winner_award"] . ' St', $name_local);
 						$f->InsertHistoric($id_guest, 6, $meta);
 					}
 					
@@ -137,11 +137,11 @@ while($stmt_season->fetch())
                     $stmt_balance->execute();
                     $stmt_balance->close();
 					if($ghost_local == 0){
-						$meta = array($award_tie . ' Coins', $name_guest);
+						$meta = array($award_tie . ' St', $name_guest);
 						$f->InsertHistoric($id_home, 7, $meta);
 					}
 					if($ghost_guest == 0){
-						$meta = array($award_tie . ' Coins', $name_local);
+						$meta = array($award_tie . ' St', $name_local);
 						$f->InsertHistoric($id_guest, 7, $meta);
 					}
                     //CARGO A LA TABLA EL PUNTO QUE SACO EL LOCAL (EMPATE)
@@ -160,7 +160,7 @@ while($stmt_season->fetch())
                     $stmt_match2->close();
                 }
 				if($ghost_local == 0){
-					$meta = array($stadium_revenue . ' Coins', $name_guest);
+					$meta = array($stadium_revenue . ' St', $name_guest);
 					$f->InsertHistoric($id_home, 5, $meta);
 				}
                 if($ghost_local==0)

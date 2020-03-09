@@ -60,7 +60,7 @@ $(document).ready(function(){
     <div class="dashboard-item-box">
         <div class="row container-fluid ranking_content market_master">
             <hgroup>
-                <h3 class="nom-nop"><span class="market_title">Coin Packs</span> <button class="help_box btn btn-link btn-xs" data-toggle="popover" data-placement="bottom" data-container=".market_master" data-title="Help" data-content="In this section you can buy coins for use in the game."><span class="glyphicon glyphicon-question-sign"></span></button></h3>
+                <h3 class="nom-nop"><span class="market_title">St Packs</span> <button class="help_box btn btn-link btn-xs" data-toggle="popover" data-placement="bottom" data-container=".market_master" data-title="Help" data-content="In this section you can buy St for use in the game."><span class="glyphicon glyphicon-question-sign"></span></button></h3>
             </hgroup>
             <div class="col-xs-12 market_player_box">
                 <div id="msj"></div>

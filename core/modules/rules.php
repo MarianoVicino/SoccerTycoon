@@ -28,17 +28,17 @@
                     <h2 class="text-center">GAME RULES / GUIDE</h2>
                     <h4>1. At the end of the tournament will be deducted the salary of the players. </h4>
                     <blockquote>
-                        <h5>a) Player 0 - 500 scoring (11 Coins per day)</h5>
-                        <h5>b) Player 501- 2500 scoring (13 Coins per day)</h5>
-                        <h5>c) Player 2501- 4000 scoring (46 Coins per day)</h5>
-                        <h5>d) Player 4001-9000 scoring (77 Coin per day)</h5>
-                        <h5>e)  Player with more than 9001 scoring (150 Coin per day)
+                        <h5>a) Player 0 - 500 scoring (11 St per day)</h5>
+                        <h5>b) Player 501- 2500 scoring (13 St per day)</h5>
+                        <h5>c) Player 2501- 4000 scoring (46 St per day)</h5>
+                        <h5>d) Player 4001-9000 scoring (77 St per day)</h5>
+                        <h5>e)  Player with more than 9001 scoring (150 St per day)
 </h5>
                     </blockquote>
                     <h4>2. The tournament will have 58 matches, 2 matches per day so the duration of that will be 29 days.</h4><br>
-                    <h4>3. If you win the tournament, your team will rise to the next season. The higher divisions pay more Coins.</h4><br>
-                    <h4>4. If you want to withdraw money from the game, you will exchange your coins for Dollars.</h4><br>
-                    <h4>5. If you want to add money into the game, you can do it via our Payments Method. The accreditation of coins is immediate.</h4><br>
+                    <h4>3. If you win the tournament, your team will rise to the next season. The higher divisions pay more St.</h4><br>
+                    <h4>4. If you want to withdraw money from the game, you will exchange your St for Dollars.</h4><br>
+                    <h4>5. If you want to add money into the game, you can do it via our Payments Method. The accreditation of St is immediate.</h4><br>
                     <h4> 6. Referral system: </h4>
                     <h5> Each referral that you bring, you must send an email to info@goalmanageronline informing the user name of your referral, this referral will be added to a list and every investment that he makes, you will benefit as follows: <br>
                      1) Each investment that the user makes, you will get 10% of the total deposited, for example if your referrer deposits 50dls you will take 5dls.<br>
@@ -61,7 +61,7 @@
 <h4> 11. What can I do in my formation? <br/> <br/>
 
                   1) Position Players on the court, remember that positioning it badly represents a reduction of 50% of the player's score. <br/> <br/>
-                  2) You can sell a player from the list of substitutes instantly by sliding it into the basket, (1sc for 7 coins) for example 100sc player will sell for 700coins. <br/> <br/>
+                  2) You can sell a player from the list of substitutes instantly by sliding it into the basket, (1sc for 7 St) for example 100sc player will sell for 700St. <br/> <br/>
                   3) To make changes to the court, you only have to slide one player to the other's position and they will be changed. <br/>
                   
                   Explanation of the design / comparison between a well positioned and poorly positioned player: <br/>
@@ -81,11 +81,11 @@
                     <h2 class="text-center">REGLAS DEL JUEGO Y GUIA</h2>
                     <h4>1. En el final del torneo, se descontará el sueldo de los jugadores.</h4>
                     <blockquote>
-                      <h5>a) Player 0 - 500 scoring (11 Coins per day)</h5>
-                        <h5>b) Player 501- 2500 scoring (13 Coins per day)</h5>
-                        <h5>c) Player 2501- 4000 scoring (46 Coins per day)</h5>
-                        <h5>d) Player 4001-9000 scoring (77 Coin per day)</h5>
-                        <h5>e)  Player with more than 9001 scoring (150 Coin per day)</h5>
+                      <h5>a) Player 0 - 500 scoring (11 St per day)</h5>
+                        <h5>b) Player 501- 2500 scoring (13 St per day)</h5>
+                        <h5>c) Player 2501- 4000 scoring (46 St per day)</h5>
+                        <h5>d) Player 4001-9000 scoring (77 St per day)</h5>
+                        <h5>e)  Player with more than 9001 scoring (150 St per day)</h5>
                                             </blockquote>
                     <h4>2. El torneo tendrá 58 partidos, 2 partidos por día, por lo que la duración de la misma será de 29 días.</h4><br>
                     <h4>3. Si ganas el torneo, tu equipo subirá a la próxima temporada. Las divisiones más altas pagan más monedas.</h4><br>
@@ -112,7 +112,7 @@
                   <h4>11. Qué puedo hacer en my formation?<br/><br/>
 
                   1) Posicionar Jugadores en la cancha, recuerde que posicionarlo mal representa una reduccion del 50% del score del jugador.<br/><br/>
-                  2) Se puede vender un jugador de la lista de suplentes al instante, deslizandolo al cesto, (1sc por 7 coins) por ejemplo jugador de 100sc se venderá a 700coins.<br/><br/>
+                  2) Se puede vender un jugador de la lista de suplentes al instante, deslizandolo al cesto, (1sc por 7 St) por ejemplo jugador de 100sc se venderá a 700St.<br/><br/>
                   3) Para hacer cambios en la cancha,solo tiene que deslizar un jugador a la posición del otro y estos serán cambiados.<br/>
                   
                   Explicacion del diseño / comparación entre un jugador bien posicionado y mal posicionado :<br/>

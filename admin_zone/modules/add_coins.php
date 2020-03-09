@@ -34,14 +34,14 @@ $(document).ready(function(){
 </script>
 <div class="well">
     <div class="len50">
-        <h4 class="text-center">AGREGAR COINS</h4>
+        <h4 class="text-center">AGREGAR ST</h4>
         <div id="msj"></div>
         <form method="POST" action="#">
             <div class="form-group">
                 <input type="text" name="user" id="search" class="form-control" placeholder="BUSQUE UN USUARIO...">
             </div>
             <div class="form-group">
-                <input type="number" name="coins" min="1" max="99999999" class="form-control" placeholder="CANTIDAD DE COINS A AGREGAR" required>
+                <input type="number" name="coins" min="1" max="99999999" class="form-control" placeholder="CANTIDAD DE ST A AGREGAR" required>
             </div>
             <button type="submit" class="btn btn-default center-block" id="button_submit">AGREGAR</button>
         </form>
