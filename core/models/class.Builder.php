@@ -283,7 +283,7 @@ class Builder
     public function GetNextMatch($user)
     {
 		
-		$time1 = $this->getNextRunTime(['i' => 0, 'H' => 0, 'd' => 0, 'm' => 0]);
+		$time1 = $this->getNextRunTime(['i' => 0, 'H' => 22, 'd' => 0, 'm' => 0]);
 		$time2 = $this->getNextRunTime(['i' => 0, 'H' => 24, 'd' => 01, 'm' => 01]);
 		$time = min($time1, $time2);
 		
@@ -291,9 +291,9 @@ class Builder
 		<span id="nextMatch" class="clock_box"></span>
 		<script>
 		var nextGame = moment.tz("<?= date('Y-m-d H:i:s', $time); ?>", "UTC");
-		$('#nextMatch').countdown(nextGame.toDate(), function(event) {
+		/*$('#nextMatch').countdown(nextGame.toDate(), function(event) {
 		  $(this).html(event.strftime('%H:%M:%S'));
-		});
+		});*/
 		</script>
 		<?php
 		
