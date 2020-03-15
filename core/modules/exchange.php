@@ -168,7 +168,7 @@ function coonsultar(accion2,value2) {
         processData: false
     });
 }
-/*am4core.ready(function() {
+am4core.ready(function() {
 
 // Themes begin
 am4core.useTheme(am4themes_animated);
@@ -180,7 +180,24 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
  chart.dateFormatter.language = new am4core.Language();
  chart.dateFormatter.language.locale = am4lang_es_ES;
 // Add data
-chart.data = [{
+chart.data = [
+<?php 
+  $nn = 1;
+  $sql = mysqli_query($db, "SELECT * FROM `Gold_Historico` ORDER BY fecha ASC");
+  while ($re = mysqli_fetch_array($sql)) {
+    if($sql->num_rows == $nn){
+      echo "{
+              'date': '".$re['fecha']."',
+              'value': '".$re['precio']."'
+            }";
+    }else{
+      echo "{
+              'date': '".$re['fecha']."',
+              'value': '".$re['precio']."'
+            },";
+    }
+  }?>
+/*{
   "date": "2012-07-27",
   "value": 13
 }, {
@@ -210,7 +227,7 @@ chart.data = [{
 }, {
   "date": "2012-08-05",
   "value": 17
-}];
+}*/];
 
 // Set input format for the dates
 chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
@@ -257,7 +274,7 @@ chart.scrollbarY.parent = chart.leftAxesContainer;
 chart.scrollbarY.toBack();*/
 
 // Create a horizontal scrollbar with previe and place it underneath the date axis
-/*chart.scrollbarX = new am4charts.XYChartScrollbar();
+chart.scrollbarX = new am4charts.XYChartScrollbar();
 chart.scrollbarX.series.push(series);
 chart.scrollbarX.parent = chart.bottomAxesContainer;
 
@@ -265,5 +282,5 @@ dateAxis.start = 0.79;
 dateAxis.keepSelection = true;
 
 
-}); */// end am4core.ready()
+}); // end am4core.ready()
 </script>

@@ -56,7 +56,7 @@ class Fn
     }
     public function DeterminatePlayerGroup($position)
     {
-        $defensive=array("SW","CB","WLB","WRB","FLB","FRB");
+        $defensive=array("SW","CB","WLB","WRB","FLB","FRB","LB");
         $midfield=array("CM","MRB","MLB","DM","OM","SLM","SRM");
         $attack=array("RW","LW","IF","CF","HO");
         if($position==="GK")

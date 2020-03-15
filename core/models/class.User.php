@@ -93,11 +93,11 @@ class User
                 $stmt=$db->prepare("UPDATE Ligas SET full=?,equipos_reales=? WHERE idLigas=?");
                 $stmt->bind_param("iii", $full,$n_real_teams,$id_e_league);
                 $stmt->execute();
-                $nombre=$user." team";
+                //$nombre=$user." team";
                 $password=hash('sha512', mb_strtolower($password,'UTF-8'));
                 $email=mb_strtolower($email,'UTF-8');
-                $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario=?,clave=?,email=?,oro=10,fantasma=0,referral=?,asignado=0 WHERE idEquipos=?;");
-                $stmt->bind_param("ssssii", $nombre,$user,$password,$email,$ref,$id_e_team);
+                $stmt=$db->prepare("UPDATE Equipos SET /*nombre=?,*/usuario=?,clave=?,email=?,oro=10,fantasma=0,referral=?,asignado=0 WHERE idEquipos=?;");
+                $stmt->bind_param("ssssii", /*$nombre,*/$user,$password,$email,$ref,$id_e_team);
                 $stmt->execute();
                 $name_stadium=$user." Stadium";
                 $stmt=$db->prepare("UPDATE Estadios SET nombre_es=? WHERE Equipos_idEquipos=?;");
@@ -151,7 +151,7 @@ class User
                         // CREO EQUIPO QUE USARA EL JUGADOR
                         if($i==1)
                         {
-                            $nombre=$user." team";
+                            $nombre="FC 0000";
                             $password=hash('sha512', mb_strtolower($password,'UTF-8'));
                             $email=mb_strtolower($email,'UTF-8');
                             $stmt=$db->prepare("INSERT INTO Equipos (nombre,score,usuario,clave,email,oro,fantasma,formacion,nombre_formacion,Ligas_idLigas,referral,asignado) VALUES (?,0,?,?,?,0,0,1,'4-4-2',?,?,0);");
@@ -162,8 +162,9 @@ class User
                         }
                         else
                         {
-                            $nombre="Team ".$sufijo_fantasma;
-                            $stmt=$db->prepare("INSERT INTO Equipos (nombre,score,oro,fantasma,formacion,nombre_formacion,Ligas_idLigas,referral) VALUES (?,0,1000,1,1,'4-4-2',?,?);");
+                            $nombre=str_pad("FC".$sufijo_fantasma, 4, "0", STR_PAD_LEFT)
+                            //$nombre="FC".$sufijo_fantasma;
+                            $stmt=$db->prepare("INSERT INTO Equipos (nombre,score,oro,fantasma,formacion,nombre_formacion,Ligas_idLigas,referral) VALUES (?,0,10,1,1,'4-4-2',?,?);");
                             $stmt->bind_param("sii", $nombre,$id_league,$ref);
                             $stmt->execute();
                             $teams[]=$stmt->insert_id;
