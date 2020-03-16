@@ -93,11 +93,10 @@ class User
                 $stmt=$db->prepare("UPDATE Ligas SET full=?,equipos_reales=? WHERE idLigas=?");
                 $stmt->bind_param("iii", $full,$n_real_teams,$id_e_league);
                 $stmt->execute();
-                //$nombre=$user." team";
                 $password=hash('sha512', mb_strtolower($password,'UTF-8'));
                 $email=mb_strtolower($email,'UTF-8');
-                $stmt=$db->prepare("UPDATE Equipos SET /*nombre=?,*/usuario=?,clave=?,email=?,oro=10,fantasma=0,referral=?,asignado=0 WHERE idEquipos=?;");
-                $stmt->bind_param("ssssii", /*$nombre,*/$user,$password,$email,$ref,$id_e_team);
+                $stmt=$db->prepare("UPDATE Equipos SET usuario=?,clave=?,email=?,oro=10,fantasma=0,referral=?,asignado=0 WHERE idEquipos=?;");
+                $stmt->bind_param("ssssi",$user,$password,$email,$ref,$id_e_team);
                 $stmt->execute();
                 $name_stadium=$user." Stadium";
                 $stmt=$db->prepare("UPDATE Estadios SET nombre_es=? WHERE Equipos_idEquipos=?;");
@@ -105,7 +104,7 @@ class User
                 $stmt->execute();
                 $stmt->close();
                 $db->close();
-                session_start();
+                //session_start();
                 $_SESSION['user_fmo']=$user;
                 echo '<div class="alert alert-success alert-dismissible" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>

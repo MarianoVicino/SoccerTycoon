@@ -265,8 +265,8 @@ class Miscellaneous
         if($stmt->num_rows>0)
         {
             $stmt->fetch();
-            $nombre="Team ".($id_team-1);
-            $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario=NULL,clave=NULL,email=NULL,email_paypal=NULL,email_mercadopago=NULL,email_neteller=NULL,fantasma=1,asignado=1,oro=1000 WHERE usuario=?;");
+            $nombre="FC ".($id_team-1);
+            $stmt=$db->prepare("UPDATE Equipos SET nombre=?,usuario=NULL,clave=NULL,email=NULL,email_paypal=NULL,email_mercadopago=NULL,email_neteller=NULL,fantasma=1,asignado=1,oro=0 WHERE usuario=?;");
             $stmt->bind_param("ss", $nombre,$user);
             $stmt->execute();
             /*if($rangue==4)
