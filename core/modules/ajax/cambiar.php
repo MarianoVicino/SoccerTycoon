@@ -33,7 +33,7 @@ if($_POST['accion'] == "sumar"){
 	$restar = $oro - $precio;
 	$sumar = $gold + $regla;
 	mysqli_query($db, "UPDATE `Equipos` SET `oro`='$restar',`gold`='".number_format($sumar, 3)."' WHERE usuario='".$_POST['usuario']."'");
-	$texto = "<b>".$_POST['usuario']."</b> bought ".$precio." gold and the rate increase to ".number_format($final, 3);
+	$texto = "<b>".$_POST['usuario']."</b> bought ".number_format($regla, 3)." gold and the rate increase to ".number_format($final, 3);
 }else{
 	$restar = $gold - $precio;
 	$sumar = $oro + $regla;

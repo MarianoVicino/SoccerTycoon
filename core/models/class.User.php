@@ -162,9 +162,9 @@ class User
                         }
                         else
                         {
-                            $nombre=str_pad("FC".$sufijo_fantasma, 4, "0", STR_PAD_LEFT)
+                            $nombre="FC ".str_pad($sufijo_fantasma, 4, "0", STR_PAD_LEFT);
                             //$nombre="FC".$sufijo_fantasma;
-                            $stmt=$db->prepare("INSERT INTO Equipos (nombre,score,oro,fantasma,formacion,nombre_formacion,Ligas_idLigas,referral) VALUES (?,0,10,1,1,'4-4-2',?,?);");
+                            $stmt=$db->prepare("INSERT INTO Equipos (nombre,score,oro,fantasma,formacion,nombre_formacion,Ligas_idLigas,referral) VALUES (?,0,0,1,1,'4-4-2',?,?);");
                             $stmt->bind_param("sii", $nombre,$id_league,$ref);
                             $stmt->execute();
                             $teams[]=$stmt->insert_id;

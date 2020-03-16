@@ -126,12 +126,14 @@ while($stmt_season->fetch())
                     //CALCULO EL PRECIO DE UN EMPATE
                     $award_tie=intval($award["match_winner_award"]/2);
                     //CARGO EL MONTO QUE SE GANO POR ENTRADAS A ESTADIO DEL LOCAL Y LE PAGO LA MITAD DEL PREMIO POR PARTIDO
-                    $balance_local=$balance_local+$award_tie+$stadium_revenue;
+                    //$balance_local=$balance_local+$award_tie+$stadium_revenue;
+                    $balance_local=$balance_local;
                     $stmt_balance=$db->prepare("UPDATE Equipos SET oro=? WHERE idEquipos=?;");
                     $stmt_balance->bind_param("ii", $balance_local,$id_home);
                     $stmt_balance->execute();
                     //LE PAGO LA MITAD DEL PREMIO AL VISITANTE YA QUE EMPATO
-                    $balance_guest=$balance_guest+$award_tie;
+                    //$balance_guest=$balance_guest+$award_tie;
+                    $balance_guest=$balance_guest;
                     $stmt_balance=$db->prepare("UPDATE Equipos SET oro=? WHERE idEquipos=?;");
                     $stmt_balance->bind_param("ii", $balance_guest,$id_guest);
                     $stmt_balance->execute();
